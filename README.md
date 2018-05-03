@@ -1,4 +1,4 @@
-# myblog
+# do-what-works
 
 > Nuxt.js project
 
