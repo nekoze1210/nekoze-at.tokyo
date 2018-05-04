@@ -16,8 +16,7 @@
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/font-awesome": "^1.0.3",
     "buefy": "^0.6.5",
-    "nuxt": "^1.0.0",
-    "nuxtent": "^1.4.1"
+    "nuxt": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
