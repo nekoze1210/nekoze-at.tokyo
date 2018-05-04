@@ -15,7 +15,8 @@
   "dependencies": {
     "@nuxtjs/font-awesome": "^1.0.3",
     "buefy": "^0.6.5",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "nuxtent": "^1.4.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
