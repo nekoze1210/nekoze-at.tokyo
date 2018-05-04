@@ -18,7 +18,7 @@ module.exports = {
   /*
  ** Build configuration
  */
-  modules: ['@nuxtjs/font-awesome', 'nuxtent'],
+  modules: ['@nuxtjs/font-awesome', '@nuxtjs/axios', 'nuxtent'],
   css: ['buefy/lib/buefy.css'],
   build: {
     /*
