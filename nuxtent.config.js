@@ -14,8 +14,8 @@ module.exports = {
   },
   api: function (isStatic) {
     return {
-      baseURL: isStatic ? 'https://dowhatworks.netlify.com/' : 'http://localhost:3000',
-      browserBaseURL: isStatic ? 'https://dowhatworks.netlify.com/' : 'http://localhost:3000'
+      baseURL: 'http://localhost:3000',
+      browserBaseURL: 'http://localhost:3000'
     }
   },
   parsers: {
