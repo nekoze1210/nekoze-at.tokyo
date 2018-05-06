@@ -1,19 +1,17 @@
 <template>
   <div class="post">
     <div class="column">
-      <div class="article">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content has-text-centered">
-              <h1 class="title article-title">{{ post.title }}</h1>
-              <p class="subtitle is-6 article-subtitle has-text-right">
-                {{ post.published }}
-              </p>
-            </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content has-text-centered">
+            <h1 class="title article-title">{{ post.title }}</h1>
+            <p class="subtitle is-6 article-subtitle has-text-right">
+              {{ post.published }}
+            </p>
           </div>
-          <div class="content article-body">
-            <nuxtent-body :body="post.body" />
-          </div>
+        </div>
+        <div class="content article-body">
+          <nuxtent-body :body="post.body" />
         </div>
       </div>
     </div>
@@ -21,8 +19,6 @@
 </template>
 
 <script>
-import { DateTime } from 'luxon'
-
 export default {
   asyncData: async ({ app, route, payload }) => ({
     post: payload || await app.$content('/').get(route.path)

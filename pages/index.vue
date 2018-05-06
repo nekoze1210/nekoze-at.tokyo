@@ -18,9 +18,9 @@
 </template>
 
 <script>
-  export default {
-    asyncData: async ({ app, route, payload }) => ({
-      posts: payload || await app.$content('/').getAll()
-    })
-  }
+export default {
+  asyncData: async ({ app, route, payload }) => ({
+    posts: payload || await app.$content('/').getAll()
+  })
+}
 </script>

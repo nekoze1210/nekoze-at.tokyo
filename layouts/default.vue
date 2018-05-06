@@ -8,16 +8,16 @@
 </template>
 
 <script>
-  import AppHeader from '~/components/AppHeader'
+import AppHeader from '~/components/AppHeader'
 
-  export default {
-    components: { AppHeader }
-  }
+export default {
+  components: { AppHeader }
+}
 </script>
 
 <style>
 .post {
-  margin: 2.5rem 0;
+  margin: 1.0rem 0;
 }
 .post .content p {
     line-height: 1.9;
