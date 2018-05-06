@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
   head: {
     title: 'Do What Works',
     meta: [
@@ -11,19 +8,14 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  /*
-  ** Customize the progress bar color
-  */
   loading: { color: '#3B8070' },
-  /*
- ** Build configuration
- */
-  modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
+  modules: [
+    'nuxtent',
+    '@nuxtjs/font-awesome',
+    '@nuxtjs/pwa'
+  ],
   css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
   build: {
-    /*
-    ** Run ESLint on save
-    */
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
