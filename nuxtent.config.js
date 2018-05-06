@@ -13,10 +13,7 @@ module.exports = {
     isPost: false
   },
   api: function (isStatic) {
-    return {
-      baseURL: 'http://localhost:3000',
-      browserBaseURL: 'http://localhost:3000'
-    }
+    return { baseURL: 'https://dowhatworks.netlify.com/', browserBaseURL: 'https://dowhatworks.netlify.com/' }
   },
   parsers: {
     md: {
