@@ -12,10 +12,10 @@
           </p>
         </div> -->
         <div class="navbar-item">
-          <router-link to="/about">About</router-link>
+          <router-link to="/about" class="has-text-black">About</router-link>
         </div>
         <div class="navbar-item">
-          <a href="https://github.com/nekoze1210" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/nekoze1210" target="_blank"><i class="fa fa-github has-text-black"></i></a>
         </div>
       </div>
     </div>

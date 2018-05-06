@@ -11,6 +11,9 @@
 
 <style scoped>
 .navbar-item-logo {
-  font-weight: 500
+  font-weight: 500;
+}
+.navbar-item-logo:hover {
+  color: #63CD6D;
 }
 </style>
