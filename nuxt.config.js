@@ -18,8 +18,8 @@ module.exports = {
   /*
  ** Build configuration
  */
-  modules: ['@nuxtjs/font-awesome', '@nuxtjs/axios'],
-  css: ['buefy/lib/buefy.css'],
+  modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
+  css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
   build: {
     /*
     ** Run ESLint on save
@@ -32,13 +32,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
-    },
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': {
-          warning: false
-        }
       }
     }
   }
