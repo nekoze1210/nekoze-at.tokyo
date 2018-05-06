@@ -1,6 +1,6 @@
 <template>
   <nav class='navbar is-fixed-top' role='navigation'>
-    <app-logo></app-logo>
+    <app-logo />
     <div id="sideMenu" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
@@ -12,16 +12,10 @@
           </p>
         </div>
         <div class="navbar-item">
-          <router-link to="/sitemap"></router-link>
-        </div>
-        <div class="navbar-item">
           <router-link to="/about">About</router-link>
         </div>
         <div class="navbar-item">
-          <router-link to="#"><i class="fa fa-rss"></i></router-link>
-        </div>
-        <div class="navbar-item">
-          <a href="https://github.com/nekoze1210" target="_blank"><i class="fa fa-github"></i></a>
+          <a href="https://github.com/nekoze1210/do-what-works" target="_blank"><i class="fa fa-github"></i></a>
         </div>
       </div>
     </div>
