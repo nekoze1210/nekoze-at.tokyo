@@ -9,11 +9,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   loading: { color: '#3B8070' },
-  modules: [
-    'nuxtent',
-    '@nuxtjs/font-awesome',
-    '@nuxtjs/pwa'
-  ],
+  modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
   css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
   build: {
     extend(config, { isDev, isClient }) {
@@ -26,5 +22,8 @@ module.exports = {
         })
       }
     }
+  },
+  workbox: {
+    dev: true
   }
 }
