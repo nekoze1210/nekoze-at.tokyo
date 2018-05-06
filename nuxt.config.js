@@ -1,12 +1,29 @@
 module.exports = {
   head: {
     title: 'Do What Works',
+    htmlAttrs: {
+      lang: 'ja'
+    },
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '@cuten77' }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+      { name: 'application-name', content: 'Do What Works' },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: '「役に立つことをする」をコンセプトにした技術系ブログです。'
+      },
+      { name: 'theme-color', content: '#FFFFFF' },
+      {
+        property: 'og:title',
+        content: 'Do What Works',
+        hid: 'ogTitle'
+      }
+    ]
   },
   loading: { color: '#3B8070' },
   modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
@@ -22,8 +39,5 @@ module.exports = {
         })
       }
     }
-  },
-  workbox: {
-    dev: true
   }
 }
