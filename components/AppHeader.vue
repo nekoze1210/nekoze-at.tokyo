@@ -3,14 +3,14 @@
     <app-logo />
     <div id="sideMenu" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item">
+        <!-- <div class="navbar-item">
           <p class="control has-icons-left">
             <input class="input" type="text" placeholder="Search">
             <span class="icon is-left">
               <i class="fa fa-search" aria-hidden="true"></i>
             </span>
           </p>
-        </div>
+        </div> -->
         <div class="navbar-item">
           <router-link to="/about">About</router-link>
         </div>
