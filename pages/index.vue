@@ -18,9 +18,7 @@
 </template>
 
 <script>
-  // import BlogList from '~/components/BlogList'
   export default {
-    // components: { BlogList },
     asyncData: async ({ app, route, payload }) => ({
       posts: payload || await app.$content('/').getAll()
     })
