@@ -13,8 +13,8 @@ module.exports = {
     isPost: false
   },
   api: {
-    baseURL: 'http://localhost:3000',
-    browserBaseURL: 'http://localhost:3000'
+    baseURL: isStatic ? 'https://dowhatworks.io' : 'http://localhost:3000',
+    browserBaseURL: isStatic ? 'https://dowhatworks.io' : 'http://localhost:3000'
   },
   parsers: {
     md: {
