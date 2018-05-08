@@ -5,7 +5,7 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content has-text-centered">
-              <router-link :to="post.permalink"><p class="title article-title">{{ post.title }}</p></router-link>
+              <nuxt-link :to="post.permalink"><p class="title article-title">{{ post.title }}</p></nuxt-link>
               <p class="subtitle is-6 article-subtitle">
                 {{ post.published }}
               </p>
