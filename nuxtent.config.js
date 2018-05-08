@@ -30,5 +30,8 @@ module.exports = {
     }
   },
   css: ['prismjs/themes/prism-coy.css'],
-  api: { baseURL: process.env.BASE_URL || 'http://localhost:3000' }
+  api: {
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    browserBaseURL: process.env.BASE_URL || 'http://localhost:3000'
+  }
 }
