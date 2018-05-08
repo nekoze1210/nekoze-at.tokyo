@@ -12,3 +12,6 @@ dist
 
 # Service Worker
 static/sw.js
+
+# yarn
+yarn-error.log
