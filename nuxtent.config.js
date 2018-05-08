@@ -31,7 +31,8 @@ module.exports = {
   },
   css: ['prismjs/themes/prism-coy.css'],
   api: {
-    baseURL: 'https://dowhatworks.netlify.com',
-    browserBaseURL: 'https://dowhatworks.netlify.com'
+    baseURL: process.env.NODE_ENV === 'production'
+        ? 'http://myipsvps:3000'
+        : 'http://myipvps:3000'
   }
 }
