@@ -30,9 +30,5 @@ module.exports = {
     }
   },
   css: ['prismjs/themes/prism-coy.css'],
-  api: {
-    baseURL: process.env.NODE_ENV === 'production'
-        ? 'http://myipsvps:3000'
-        : 'http://myipvps:3000'
-  }
+  api: { baseURL: 'http://localhost:3000' }
 }
