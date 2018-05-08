@@ -7,34 +7,31 @@ module.exports = {
   content: {
     permalink: '/articles/:slug',
     page: '/_content',
-    generate: [
-      'get', 'getAll'
-    ],
+    generate: ['get', 'getAll'],
     isPost: false
-  },
-  api: function (isStatic) {
-    return { baseURL: 'https://dowhatworks.netlify.com/', browserBaseURL: 'https://dowhatworks.netlify.com/' }
   },
   parsers: {
     md: {
       extend(config) {
         config.highlight = (code, lang) => {
-          return `<pre class="language-${lang}"><code class="language-${lang}">${Prism.highlight(code, Prism.languages[lang] || Prism.languages.markup)}</code></pre>` 
+          return `<pre class="language-${lang}"><code class="language-${lang}">${Prism.highlight(
+            code,
+            Prism.languages[lang] || Prism.languages.markup
+          )}</code></pre>`
         }
       },
-      plugins: [
-        emoji,
-        [ externalLinks, { target: '_blank', rel: 'noopener' } ]
-      ],
+      plugins: [emoji, [externalLinks, { target: '_blank', rel: 'noopener' }]],
       customize(parser) {
         parser.linkify.tlds('onion')
         parser.renderer.rules['emoji'] = (token, idx) => {
-          return twemoji.parse(token[idx].content);
+          return twemoji.parse(token[idx].content)
         }
       }
     }
   },
-  css: [
-    'prismjs/themes/prism-coy.css'
-  ]
+  css: ['prismjs/themes/prism-coy.css'],
+  api: {
+    baseURL: 'https://dowhatworks.netlify.com',
+    browserBaseURL: 'https://dowhatworks.netlify.com'
+  }
 }
