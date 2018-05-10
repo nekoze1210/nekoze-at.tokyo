@@ -31,7 +31,9 @@ module.exports = {
   },
   css: ['prismjs/themes/prism-coy.css'],
   api: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
-    browserBaseURL: process.env.BASE_URL || 'http://localhost:3000'
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'http://dowhatworks.netlify.com/'
+        : 'http://localhost:3000'
   }
 }
