@@ -25,7 +25,7 @@ module.exports = {
       }
     ]
   },
-  loading: { color: '#3B8070' },
+  loading: { color: '#63CD6D' },
   modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
   css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
   build: {
