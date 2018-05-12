@@ -1,7 +1,14 @@
 <template>
   <nav class='navbar is-fixed-top' role='navigation'>
-    <app-logo />
-    <div id="sideMenu" class="navbar-menu">
+    <div class='navbar-brand'>
+      <app-logo />
+      <a type="button" class="navbar-burger burger " :class="{ 'is-active' : isActive }" data-target="sideMenu" v-on:click="isActive=!isActive">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="sideMenu" class="navbar-menu" :class="{ 'is-active' : isActive }">
       <div class="navbar-end">
         <!-- <div class="navbar-item">
           <p class="control has-icons-left">
@@ -26,19 +33,11 @@
 import AppLogo from '~/components/AppLogo'
 
 export default {
-  components: { AppLogo },
-  mounted: function () {
-    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    if ($navbarBurgers.length > 0) {
-      $navbarBurgers.forEach(function ($el) {
-        $el.addEventListener('click', function () {
-          var target = $el.dataset.target;
-          var $target = document.getElementById(target);
-          $el.classList.toggle('is-active')
-          $target.classList.toggle('is-active')
-        })
-      })
+  data () {
+    return {
+      isActive: false
     }
-  }
+  },
+  components: { AppLogo }
 }
 </script>
