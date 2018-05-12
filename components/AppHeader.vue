@@ -19,6 +19,9 @@
           </p>
         </div> -->
         <div class="navbar-item">
+          <nuxt-link to="/" class="has-text-black">Home</nuxt-link>
+        </div>
+        <div class="navbar-item">
           <nuxt-link to="/about" class="has-text-black">About</nuxt-link>
         </div>
         <div class="navbar-item">
