@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to='/' class='navbar-item navbar-item-logo'><span class="has-text-success">D</span>o <span class="has-text-success">W</span>hat <span class="has-text-success">W</span>orks</nuxt-link>
+  <nuxt-link to='/' class='navbar-item navbar-item-logo has-text-black'><span class="has-text-success">D</span>o <span class="has-text-success">W</span>hat <span class="has-text-success">W</span>orks</nuxt-link>
 </template>
 
 <style scoped>
