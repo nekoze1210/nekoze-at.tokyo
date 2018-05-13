@@ -38,3 +38,17 @@ export default {
   components: { AppLogo }
 }
 </script>
+
+<style lang="scss" scoped>
+  .navbar-item.is-tab {
+    &:hover {
+      color: #63CD6D;
+      border-bottom-color: #63CD6D;
+    }
+  }
+  .navbar-item.is-tab.is-active {
+    color: #63CD6D;
+    border-bottom-color: #63CD6D;
+  }
+</style>
+
