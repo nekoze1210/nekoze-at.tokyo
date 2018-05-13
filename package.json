@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
     "@nuxtjs/axios": "latest",
@@ -19,22 +20,25 @@
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "contentful": "^6.1.0",
+    "contentful-migration": "^0.8.0",
+    "global": "^4.3.2",
     "luxon": "^1.2.0",
     "markdown-it": "^8.4.1",
     "markdown-it-emoji": "^1.4.0",
     "markdown-it-link-attributes": "^2.1.0",
     "node-sass": "^4.9.0",
     "nuxt": "npm:nuxt-edge",
-    "nuxtent": "latest",
     "prismjs": "^1.14.0",
     "sass-loader": "^7.0.1",
-    "twemoji": "^2.5.1"
+    "twemoji": "^2.5.1",
+    "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "push-dir": "^0.4.1"
   }
 }
