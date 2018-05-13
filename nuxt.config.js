@@ -1,5 +1,5 @@
 const contentful = require('contentful')
-const config = require('./.contentful.json') || ''
+const config = process.env.NODE_ENV != 'production' ? require('./.contentful.json') : ''
 const client = contentful.createClient({
   space: config.CTF_SPACE_ID,
   accessToken: config.CTF_CDA_ACCESS_TOKEN
