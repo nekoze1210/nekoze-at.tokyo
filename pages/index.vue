@@ -1,13 +1,13 @@
 <template>
   <div class="articles">
     <div class="column">
-      <div class="card article" v-for="post in posts" :key="post.title">
+      <div class="card article" v-for="post in posts" :key="post.fields.slug">
         <div class="card-content">
           <div class="media">
             <div class="media-content has-text-centered">
-              <nuxt-link :to="post.permalink"><p class="title article-title">{{ post.title }}</p></nuxt-link>
+              <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}"><p class="title article-title">{{ post.fields.title }}</p></nuxt-link>
               <p class="subtitle is-6 article-subtitle">
-                {{ post.published }}
+                {{ ( new Date(post.fields.published)).toDateString() }}
               </p>
             </div>
           </div>
@@ -18,9 +18,24 @@
 </template>
 
 <script>
+import { createClient } from '~/plugins/contentful.js'
+
+const client = createClient()
 export default {
-  asyncData: async ({ app, route, payload }) => ({
-    posts: payload || await app.$content('/').getAll()
-  })
+  data () {
+    return {
+      posts: []
+    }
+  },
+  asyncData({ env }) {
+    return client.getEntries({
+        'content_type': env.CTF_BLOG_POST_TYPE_ID,
+        order: '-fields.published'
+      }).then(entries => {
+        return {
+          posts: entries.items
+        }
+      }).catch(console.error)
+  }
 }
 </script>
