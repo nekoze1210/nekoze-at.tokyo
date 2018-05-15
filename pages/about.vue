@@ -10,8 +10,9 @@
           </div>
           <div class="content article-body">
             <p>
-              「役に立つことをする」をコンセプトに、技術ブログ(&ポエム)として動いていきたいと思います。
+              DoWhatWorksは、「役に立つことをする」をコンセプトに、技術(特にプログラミング)ネタをアウトプットしていくブログです。
             </p>
+            <h2 class="is-2 has-text-centered">Author</h2>
           </div>
         </div>
       </div>

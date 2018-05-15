@@ -15,6 +15,3 @@ static/sw.js
 
 # yarn
 yarn-error.log
-
-# Contentful
-.contentful.json
