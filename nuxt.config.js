@@ -1,3 +1,10 @@
+const contentful = require('contentful')
+const config = require('./.contentful.json')
+const client = contentful.createClient({
+  space: config.CTF_SPACE_ID,
+  accessToken: config.CTF_CDA_ACCESS_TOKEN
+})
+
 module.exports = {
   head: {
     title: 'Do What Works',
@@ -15,9 +22,9 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '「役に立つことをする」をコンセプトにした技術系ブログです。'
+        content: '「役立つことをする」をコンセプトにした技術系ブログ'
       },
-      { name: 'theme-color', content: '#FFFFFF' },
+      { name: 'theme-color', content: '#63CD6D' },
       {
         property: 'og:title',
         content: 'Do What Works',
@@ -25,8 +32,11 @@ module.exports = {
       }
     ]
   },
+  router: {
+    linkExactActiveClass: 'is-active'
+  },
   loading: { color: '#63CD6D' },
-  modules: ['nuxtent', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome'],
   css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
   build: {
     extend(config, { isDev, isClient }) {
@@ -39,5 +49,25 @@ module.exports = {
         })
       }
     }
+  },
+  plugins: ['./plugins/contentful.js'],
+  generate: {
+    routes() {
+      return client
+        .getEntries({
+          content_type: config.CTF_BLOG_POST_TYPE_ID
+        })
+        .then(entries => {
+          return [
+            ...entries.items.map(entry => `articles/${entry.fields.slug}`)
+          ]
+        })
+    }
+  },
+  env: {
+    CTF_SPACE_ID: config.CTF_SPACE_ID,
+    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
+    CTF_PERSON_ID: config.CTF_PERSON_ID,
+    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
   }
 }
