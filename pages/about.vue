@@ -5,15 +5,17 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content has-text-centered">
-              <h1 class="title article-title">Do What Works</h1>
+              <h1 class="title article-title">ABOUT</h1>
             </div>
           </div>
           <div class="content article-body">
             <p>
-              DoWhatWorksは、「役に立つことをする」をコンセプトに、技術(特にプログラミング)ネタをアウトプットしていくブログです。
+              技術(特にプログラミング)ネタをアウトプットしていくブログです。
             </p>
-            <h2 class="is-2 has-text-centered">Author</h2>
           </div>
+          <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <nuxt-link class="pagination-previous" to="/">&raquo; Back</nuxt-link>
+          </nav>
         </div>
       </div>
     </div>

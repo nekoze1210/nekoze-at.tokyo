@@ -1,8 +1,8 @@
 <template>
   <nav class='navbar is-fixed-top has-shadow' role='navigation'>
-    <div class='navbar-brand'>
+    <div class='navbar-brand has-background-white'>
       <app-logo />
-      <a type="button" class="navbar-burger burger " :class="{ 'is-active' : isActive }" data-target="sideMenu" v-on:click="isActive=!isActive">
+      <a type="button" class="navbar-burger burger" :class="{ 'is-active' : isActive }" data-target="sideMenu" v-on:click="isActive=!isActive">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -20,7 +20,9 @@
         </div> -->
         <nuxt-link to="/" class="navbar-item is-tab" exact>Home</nuxt-link>
         <nuxt-link to="/about" class="navbar-item is-tab" exact>About</nuxt-link>
-        <a href="https://github.com/nekoze1210" target="_blank" class="navbar-item is-tab"><i class="fa fa-github"></i></a>
+        <a href="https://github.com/nekoze1210" target="_blank" class="navbar-item is-tab">
+          <i class="fa fa-github"></i>
+        </a>
       </div>
     </div>
   </nav>
@@ -32,7 +34,7 @@ import AppLogo from '~/components/AppLogo'
 export default {
   data () {
     return {
-      isActive: false
+      isActive: false,
     }
   },
   components: { AppLogo }
@@ -51,4 +53,3 @@ export default {
     border-bottom-color: #63CD6D;
   }
 </style>
-
