@@ -36,7 +36,7 @@ module.exports = {
     linkExactActiveClass: 'is-active'
   },
   loading: { color: '#63CD6D' },
-  modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
   css: [{ src: '~assets/main.scss', lang: 'scss' }],
   build: {
     extend(config, { isDev, isClient }) {
