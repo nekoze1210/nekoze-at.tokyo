@@ -14,10 +14,18 @@
             </p>
           </div>
           <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-            <nuxt-link class="pagination-previous" to="/">&raquo; Back</nuxt-link>
+            <nuxt-link class="pagination-previous" to="/">&laquo; Back</nuxt-link>
           </nav>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    fetch({ store }) {
+      store.commit('resetMenu')
+    },
+  }
+</script>

@@ -22,6 +22,9 @@ import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
+  fetch({ store }) {
+    store.commit('resetMenu')
+  },
   data () {
     return {
       posts: []

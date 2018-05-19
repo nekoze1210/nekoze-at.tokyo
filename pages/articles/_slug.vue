@@ -26,6 +26,9 @@ import VueMarkdown from 'vue-markdown'
 
 const client = createClient()
 export default {
+  fetch({ store }) {
+    store.commit('resetMenu')
+  },
   data () {
     return {
       allPosts: [],
