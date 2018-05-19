@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'sawarabigothic';
+  src: url(//fonts.googleapis.com/earlyaccess/sawarabigothic.css);
+}
+
+@import '~bulma/sass/utilities/initial-variables';
+
+// Add a serif family
+$family-serif: 'sawarabigothic';
+
+$family-primary: $family-serif;
+
+@import '~bulma/bulma';
