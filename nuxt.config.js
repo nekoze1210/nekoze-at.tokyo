@@ -37,7 +37,7 @@ module.exports = {
   },
   loading: { color: '#63CD6D' },
   modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome'],
-  css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
+  css: [{ src: '~assets/main.scss', lang: 'scss' }],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {

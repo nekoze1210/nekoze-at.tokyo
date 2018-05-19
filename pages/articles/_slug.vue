@@ -35,6 +35,11 @@ export default {
       currentPost: []
     }
   },
+  head () {
+    return {
+      title: this.currentPost.fields.title
+    }
+  },
   components: {
     VueMarkdown
   },

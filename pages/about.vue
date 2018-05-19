@@ -24,6 +24,11 @@
 
 <script>
 export default {
+  head () {
+    return {
+      title: 'About'
+    }
+  },
   fetch({ store }) {
     store.commit('resetMenu')
   }

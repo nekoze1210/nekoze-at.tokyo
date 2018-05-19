@@ -25,6 +25,11 @@ export default {
   fetch({ store }) {
     store.commit('resetMenu')
   },
+  head () {
+    return {
+      title: 'Top'
+    }
+  },
   data() {
     return {
       posts: []
