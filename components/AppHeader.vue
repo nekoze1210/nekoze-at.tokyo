@@ -32,9 +32,9 @@
 import AppLogo from '~/components/AppLogo'
 
 export default {
-  data () {
+  data() {
     return {
-      isActive: false,
+      isActive: false
     }
   },
   components: { AppLogo }
@@ -42,14 +42,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .navbar-item.is-tab {
-    &:hover {
-      color: #63CD6D;
-      border-bottom-color: #63CD6D;
-    }
+.navbar-item.is-tab {
+  &:hover {
+    color: #63cd6d;
+    border-bottom-color: #63cd6d;
   }
-  .navbar-item.is-tab.is-active {
-    color: #63CD6D;
-    border-bottom-color: #63CD6D;
-  }
+}
+.navbar-item.is-tab.is-active {
+  color: #63cd6d;
+  border-bottom-color: #63cd6d;
+}
 </style>

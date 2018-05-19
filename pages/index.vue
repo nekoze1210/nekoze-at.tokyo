@@ -25,20 +25,23 @@ export default {
   fetch({ store }) {
     store.commit('resetMenu')
   },
-  data () {
+  data() {
     return {
       posts: []
     }
   },
   asyncData({ env }) {
-    return client.getEntries({
-        'content_type': env.CTF_BLOG_POST_TYPE_ID,
+    return client
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: '-fields.published'
-      }).then(entries => {
+      })
+      .then(entries => {
         return {
           posts: entries.items
         }
-      }).catch(console.error)
+      })
+      .catch(console.error)
   }
 }
 </script>

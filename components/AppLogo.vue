@@ -9,5 +9,4 @@
 .navbar-item-logo:hover {
   color: #63cd6d;
 }
-
 </style>

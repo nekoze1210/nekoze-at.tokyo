@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import {createClient} from '~/plugins/contentful.js'
+import { createClient } from '~/plugins/contentful.js'
 import VueMarkdown from 'vue-markdown'
 
 const client = createClient()
@@ -29,7 +29,7 @@ export default {
   fetch({ store }) {
     store.commit('resetMenu')
   },
-  data () {
+  data() {
     return {
       allPosts: [],
       currentPost: []
@@ -38,37 +38,43 @@ export default {
   components: {
     VueMarkdown
   },
-  asyncData ({ env, params }) {
-    return client.getEntries({
-      'content_type': env.CTF_BLOG_POST_TYPE_ID,
-      order: '-fields.published'
-    }).then(entries => {
-      const posts = entries.items
-      const current = posts.filter(function (item) {
-        return item.fields.slug === params.slug
+  asyncData({ env, params }) {
+    return client
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        order: '-fields.published'
       })
-      return {
-        allPosts: posts,
-        currentPost: current[0]
-      }
-    }).catch(console.error)
+      .then(entries => {
+        const posts = entries.items
+        const current = posts.filter(function(item) {
+          return item.fields.slug === params.slug
+        })
+        return {
+          allPosts: posts,
+          currentPost: current[0]
+        }
+      })
+      .catch(console.error)
   },
   computed: {
-    dateOrder: function () {
+    dateOrder: function() {
       for (let i = 0; i < this.allPosts.length; i++) {
-        if (this.allPosts[i].fields.published === this.currentPost.fields.published) {
+        if (
+          this.allPosts[i].fields.published ===
+          this.currentPost.fields.published
+        ) {
           return i
         }
       }
     },
-    nextPost: function () {
+    nextPost: function() {
       if (this.dateOrder === 0) {
         return false
       } else {
         return this.allPosts[this.dateOrder - 1]
       }
     },
-    prevPost: function () {
+    prevPost: function() {
       if (this.dateOrder === this.allPosts.length - 1) {
         return false
       } else {

@@ -23,9 +23,9 @@
 </template>
 
 <script>
-  export default {
-    fetch({ store }) {
-      store.commit('resetMenu')
-    },
+export default {
+  fetch({ store }) {
+    store.commit('resetMenu')
   }
+}
 </script>
