@@ -59,9 +59,7 @@ module.exports = {
           content_type: config.CTF_BLOG_POST_TYPE_ID
         })
         .then(entries => {
-          // console.log(entries)
           const tags = tagMapper.setTagPages(entries.items.map(entry => entry.fields.tags))
-          // console.log(tags)
           return [
             ...entries.items.map(entry => `articles/${entry.fields.slug}`),
             ...tags.map(tag => `tags/${tag}`)
