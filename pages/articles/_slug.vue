@@ -3,9 +3,12 @@
     <div class="column">
       <div class="card-content">
         <div class="media">
-          <div class="media-content has-text-centered">
-            <h1 class="title article-title">{{ currentPost.fields.title }}</h1>
+          <div class="media-content">
+            <h1 class="title article-title has-text-centered">{{ currentPost.fields.title }}</h1>
             <p class="subtitle is-6 article-subtitle has-text-right">{{ ( new Date(currentPost.fields.published)).toDateString() }}</p>
+            <div class="tags">
+              <span v-for="tag in currentPost.fields.tags" :key="tag" class="tag"><nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}"> #{{ tag }}</nuxt-link></span>
+            </div>
           </div>
         </div>
         <div class="content article-body">
