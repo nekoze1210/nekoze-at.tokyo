@@ -1,4 +1,5 @@
 const contentful = require('contentful')
+const tagMapper = require('./plugins/tag_mapper')
 const config = require('./.contentful.json')
 const client = contentful.createClient({
   space: config.CTF_SPACE_ID,
@@ -50,7 +51,7 @@ module.exports = {
       }
     }
   },
-  plugins: ['./plugins/contentful.js'],
+  plugins: ['./plugins/contentful.js', './plugins/tag_mapper.js'],
   generate: {
     routes() {
       return client
@@ -58,8 +59,12 @@ module.exports = {
           content_type: config.CTF_BLOG_POST_TYPE_ID
         })
         .then(entries => {
+          // console.log(entries)
+          const tags = tagMapper.setTagPages(entries.items.map(entry => entry.fields.tags))
+          // console.log(tags)
           return [
-            ...entries.items.map(entry => `articles/${entry.fields.slug}`)
+            ...entries.items.map(entry => `articles/${entry.fields.slug}`),
+            ...tags.map(tag => `tags/${tag}`)
           ]
         })
     }
