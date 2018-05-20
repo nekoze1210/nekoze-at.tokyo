@@ -15,7 +15,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
-      { name: 'application-name', content: 'Do What Works' },
+      { name: 'Do What Works', content: 'Do What Works' },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
@@ -59,13 +59,19 @@ module.exports = {
           content_type: config.CTF_BLOG_POST_TYPE_ID
         })
         .then(entries => {
-          const tags = tagMapper.setTagPages(entries.items.map(entry => entry.fields.tags))
+          const tags = tagMapper.setTagPages(
+            entries.items.map(entry => entry.fields.tags)
+          )
           return [
             ...entries.items.map(entry => `articles/${entry.fields.slug}`),
             ...tags.map(tag => `tags/${tag}`)
           ]
         })
     }
+  },
+  manifest: {
+    name: 'Do What Works',
+    lang: 'ja'
   },
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
