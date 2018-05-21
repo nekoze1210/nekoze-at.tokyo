@@ -70,6 +70,7 @@ module.exports = {
     }
   },
   manifest: {
+    title: 'Do What Works',
     name: 'Do What Works',
     lang: 'ja'
   },
