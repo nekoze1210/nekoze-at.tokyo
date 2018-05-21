@@ -11,7 +11,7 @@ npm-debug.log
 dist
 
 # Service Worker
-static/sw.js
+sw.*
 
 # yarn
 yarn-error.log
