@@ -72,6 +72,7 @@ module.exports = {
   manifest: {
     title: 'Do What Works',
     name: 'Do What Works',
+    short_name: 'Do What Works',
     lang: 'ja'
   },
   env: {
