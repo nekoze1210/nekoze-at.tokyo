@@ -17,6 +17,10 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'Do What Works', content: 'Do What Works' },
       {
+        name: 'google-site-verification',
+        content: '_KVS9s-r_PHeR5Nk5trB074DkddRk5omwmtrw5rDXYE'
+      },
+      {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
