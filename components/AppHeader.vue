@@ -1,8 +1,8 @@
 <template>
-  <nav class='navbar is-fixed-top has-shadow' role='navigation'>
+  <nav class='navbar has-shadow' role='navigation'>
     <div class='navbar-brand has-background-white'>
       <app-logo />
-      <a type="button" class="navbar-burger burger" data-target="sideMenu" @click="$store.commit('toggleMenu')" :class="{ 'is-active' : $store.state.isMenuActive }">
+      <!-- <a type="button" class="navbar-burger burger" data-target="sideMenu" @click="$store.commit('toggleMenu')" :class="{ 'is-active' : $store.state.isMenuActive }">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -10,20 +10,12 @@
     </div>
     <div id="sideMenu" class="navbar-menu" :class="{ 'is-active' : $store.state.isMenuActive }">
       <div class="navbar-end">
-        <!-- <div class="navbar-item">
-          <p class="control has-icons-left">
-            <input class="input" type="text" placeholder="Search">
-            <span class="icon is-left">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </span>
-          </p>
-        </div> -->
         <nuxt-link to="/" class="navbar-item is-tab" exact>Home</nuxt-link>
         <nuxt-link to="/about" class="navbar-item is-tab" exact>About</nuxt-link>
         <a href="https://github.com/nekoze1210" target="_blank" class="navbar-item is-tab" @click="$store.commit('toggleMenu')">
           <i class="fa fa-github"></i>
         </a>
-      </div>
+      </div> -->
     </div>
   </nav>
 </template>

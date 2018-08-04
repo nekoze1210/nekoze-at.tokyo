@@ -39,9 +39,9 @@ export default {
   line-height: 1.9;
   margin: 15px 0;
 }
-.media-content {
+/* .media-content {
   margin-top: 3rem;
-}
+} */
 .article,
 .promo-block {
   margin-top: 6rem;
