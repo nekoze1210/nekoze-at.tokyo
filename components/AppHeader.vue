@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.navbar {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}
 .navbar-item.is-tab {
   &:hover {
     color: #63cd6d;
