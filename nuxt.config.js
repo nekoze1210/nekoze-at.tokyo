@@ -42,7 +42,10 @@ module.exports = {
   },
   loading: { color: '#63CD6D' },
   modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
-  css: [{ src: '~assets/main.scss', lang: 'scss' }],
+  css: [
+    { src: '~assets/main.scss', lang: 'scss' },
+    { src: '~/assets/reset.css' }
+  ],
   build: {
     extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
