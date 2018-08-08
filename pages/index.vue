@@ -86,6 +86,12 @@ export default {
   margin: 0 30px;
 }
 
+@media screen and (min-width: 200px) and (max-width: 1000px) {
+  .columns--main {
+    margin: 0 10px;
+  }
+}
+
 .card {
   position: relative;
   min-height: 490px;
