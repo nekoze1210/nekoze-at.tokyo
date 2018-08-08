@@ -7,12 +7,10 @@
         <div class="container is-fluid">
           <div class="columns is-multiline">
             <div class="column is-half" v-for="post in posts" :key="post.fields.slug">
-              <div class="card">
+              <div class="card" :style="{ 'background-image': 'url(' + post.fields.hero_image.fields.file.url +')' }">
                 <div class="card-content">
                   <p class="title"><nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">{{ post.fields.title }}</nuxt-link></p>
-                  <p class="subtitle">
-                    {{ ( new Date(post.fields.published)).toDateString() }}<br>
-                  </p>
+                  <p class="subtitle">{{ ( new Date(post.fields.published)).toDateString() }}</p>
                   <div class="tags">
                     <span v-for="tag in post.fields.tags" :key="tag" class="tag"><nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}"> #{{ tag }}</nuxt-link></span>
                   </div>
@@ -89,13 +87,25 @@ export default {
 }
 
 .card {
+  position: relative;
   min-height: 490px;
   order: solid 0.2px #707070;
   border-radius: 4px;
   box-shadow: 4px 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-image: url('~/assets/article-background.jpg');
   background-size: cover;
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+
   &-content {
+    position: absolute;
     p.title {
       padding-top: 55%;
       a {
@@ -103,7 +113,33 @@ export default {
       }
     }
     p.subtitle {
-      color: #fff;
+      font-family: Avenir;
+      font-size: 20px;
+      font-weight: 900;
+      font-style: oblique;
+      font-stretch: normal;
+      line-height: 1.35;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fefefe;
+    }
+    .tags {
+      .tag {
+        background-color: transparent;
+        a {
+          font-family: Avenir;
+          font-size: 20px;
+          font-weight: 900;
+          font-style: oblique;
+          font-stretch: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: #ffffff;
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
     }
   }
 }
