@@ -1,12 +1,18 @@
 <template>
-  <nuxt-link to='/' class='navbar-item navbar-item-logo has-text-black has-background-white'><span class="has-text-success">D</span>o <span class="has-text-success">W</span>hat <span class="has-text-success">W</span>orks</nuxt-link>
+  <nuxt-link to='/' class='navbar-item has-background-white navbar-item-logo'>nekoze-at.tokyo</nuxt-link>
 </template>
 
 <style scoped>
 .navbar-item-logo {
-  font-weight: 500;
-}
-.navbar-item-logo:hover {
-  color: #63cd6d;
+  object-fit: contain;
+  font-family: Avenir;
+  font-size: 50px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #97deb8 !important;
 }
 </style>
