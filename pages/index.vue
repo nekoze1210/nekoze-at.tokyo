@@ -106,6 +106,7 @@ export default {
 
   &-content {
     position: absolute;
+    font-family: Avenir;
     p.title {
       padding-top: 55%;
       a {
@@ -113,7 +114,6 @@ export default {
       }
     }
     p.subtitle {
-      font-family: Avenir;
       font-size: 20px;
       font-weight: 900;
       font-style: oblique;
@@ -127,7 +127,6 @@ export default {
       .tag {
         background-color: transparent;
         a {
-          font-family: Avenir;
           font-size: 20px;
           font-weight: 900;
           font-style: oblique;
