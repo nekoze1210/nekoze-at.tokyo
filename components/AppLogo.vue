@@ -15,4 +15,10 @@
   text-align: left;
   color: #97deb8 !important;
 }
+
+@media screen and (min-width: 200px) and (max-width: 1000px) {
+  .navbar-item-logo {
+    font-size: 25px;
+  }
+}
 </style>
