@@ -1,23 +1,25 @@
 <template>
-  <div class="post">
-    <div class="column">
-      <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <h1 class="title article-title has-text-centered">{{ currentPost.fields.title }}</h1>
-            <p class="subtitle is-6 article-subtitle has-text-right">{{ ( new Date(currentPost.fields.published)).toDateString() }}</p>
-            <div class="tags">
-              <span v-for="tag in currentPost.fields.tags" :key="tag" class="tag"><nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}"> #{{ tag }}</nuxt-link></span>
+  <div class="container">
+    <div class="post">
+      <div class="column">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h1 class="title article-title has-text-centered">{{ currentPost.fields.title }}</h1>
+              <p class="subtitle is-6 article-subtitle has-text-right">{{ ( new Date(currentPost.fields.published)).toDateString() }}</p>
+              <div class="tags">
+                <span v-for="tag in currentPost.fields.tags" :key="tag" class="tag"><nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}"> #{{ tag }}</nuxt-link></span>
+              </div>
             </div>
           </div>
+          <div class="content article-body">
+            <vue-markdown class="content">{{ currentPost.fields.body }}</vue-markdown>
+          </div>
+          <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+            <nuxt-link v-if="prevPost" class="pagination-previous" :to="prevPost.fields.slug">&laquo; {{ prevPost.fields.title }}</nuxt-link>
+            <nuxt-link v-if="nextPost" class="pagination-next" :to="nextPost.fields.slug">{{ nextPost.fields.title }} &raquo;</nuxt-link>
+          </nav>
         </div>
-        <div class="content article-body">
-          <vue-markdown class="content">{{ currentPost.fields.body }}</vue-markdown>
-        </div>
-        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-          <nuxt-link v-if="prevPost" class="pagination-previous" :to="prevPost.fields.slug">&laquo; {{ prevPost.fields.title }}</nuxt-link>
-          <nuxt-link v-if="nextPost" class="pagination-next" :to="nextPost.fields.slug">{{ nextPost.fields.title }} &raquo;</nuxt-link>
-        </nav>
       </div>
     </div>
   </div>
@@ -38,7 +40,7 @@ export default {
       currentPost: []
     }
   },
-  head () {
+  head() {
     return {
       title: this.currentPost.fields.title
     }
