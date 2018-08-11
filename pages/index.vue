@@ -1,5 +1,5 @@
 <template>
-  <div class="columns columns--main">   
+  <div class="columns columns--main">
     <section class="column is-three-quarters">
       <div class="articles">
         <h2 class="articles__heading">Articles</h2>
@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .columns--main {
   margin: 0 30px;
 }

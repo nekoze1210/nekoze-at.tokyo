@@ -7,7 +7,7 @@
     </figure>
     <h3 class="is-3 profile__myname">Daiki Nagaoka</h3>
     <p>Web Engineer</p>
-    <!-- <button>Profile</button> -->
+    <nuxt-link to="/profile" class="button is-fullwidth">more...</nuxt-link>
   </div>
 </template>
 
@@ -17,13 +17,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .profile {
   margin-top: 3.5em;
 
   &__heading {
     width: 177px;
-    height: 68px;
     font-family: Avenir;
     font-size: 50px;
     font-weight: 900;
@@ -59,5 +58,13 @@ export default {
     text-align: left;
     color: #000000;
   }
+}
+
+.button {
+  margin-top: 30px;
+  text-align: right;
+  font-family: Avenir;
+  font-weight: 500;
+  font-stretch: normal;
 }
 </style>
