@@ -26,13 +26,7 @@
       <div class="sponsor">
         <h2 class="sponsor__heading">Ads</h2>
         <hr class="sponsor__ruler">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({
-                  google_ad_client: "ca-pub-6697069851005375",
-                  enable_page_level_ads: true
-            });
-        </script>
+        <adsbygoogle />
       </div>
     </section>
   </div>

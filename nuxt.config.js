@@ -41,7 +41,12 @@ module.exports = {
   router: {
     linkExactActiveClass: 'is-active'
   },
-  modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/font-awesome',
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-adsense'
+  ],
   css: [
     { src: '~assets/main.scss', lang: 'scss' },
     { src: '~/assets/reset.css' },
@@ -59,11 +64,7 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    './plugins/contentful.js',
-    './plugins/tag_mapper.js',
-    { src: '~plugins/ga.js', ssr: false }
-  ],
+  plugins: ['./plugins/contentful.js', './plugins/tag_mapper.js'],
   generate: {
     routes() {
       return client
@@ -86,6 +87,9 @@ module.exports = {
     name: 'nekoze-at.tokyo',
     short_name: 'nekoze-at.tokyo',
     lang: 'ja'
+  },
+  'google-adsense': {
+    id: 'ca-pub-6697069851005375'
   },
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
