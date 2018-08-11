@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import { createClient } from '~/plugins/contentful.js'
 import profile from '~/components/Profile.vue'
+import { createClient } from '~/plugins/contentful.js'
 
 const client = createClient()
 export default {
@@ -69,7 +69,8 @@ export default {
         }
       })
       .catch(console.error)
-  }
+  },
+  components: { profile }
 }
 </script>
 

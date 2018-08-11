@@ -11,6 +11,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Profile'
+}
+</script>
+
 <style lang="scss">
 .profile {
   margin-top: 3.5em;
