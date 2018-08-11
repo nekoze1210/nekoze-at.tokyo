@@ -9,14 +9,14 @@ const client = contentful.createClient({
 module.exports = {
   loading: '~/components/Loading.vue',
   head: {
-    title: 'Do What Works',
+    title: 'nekoze-at.tokyo',
     htmlAttrs: {
       lang: 'ja'
     },
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
-      { name: 'Do What Works', content: 'Do What Works' },
+      { name: 'nekoze-at.tokyo', content: 'nekoze-at.tokyo' },
       {
         name: 'google-site-verification',
         content: '_KVS9s-r_PHeR5Nk5trB074DkddRk5omwmtrw5rDXYE'
@@ -28,12 +28,12 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '「役立つことをする」をコンセプトにした技術系ブログ'
+        content: 'nekoze`s home page'
       },
       { name: 'theme-color', content: '#63CD6D' },
       {
         property: 'og:title',
-        content: 'Do What Works',
+        content: 'nekoze-at.tokyo',
         hid: 'ogTitle'
       }
     ]
@@ -78,9 +78,9 @@ module.exports = {
     }
   },
   manifest: {
-    title: 'Do What Works',
-    name: 'Do What Works',
-    short_name: 'Do What Works',
+    title: 'nekoze-at.tokyo',
+    name: 'nekoze-at.tokyo',
+    short_name: 'nekoze-at.tokyo',
     lang: 'ja'
   },
   env: {
