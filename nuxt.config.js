@@ -7,6 +7,7 @@ const client = contentful.createClient({
 })
 
 module.exports = {
+  loading: '~/components/Loading.vue',
   head: {
     title: 'Do What Works',
     htmlAttrs: {
@@ -40,11 +41,11 @@ module.exports = {
   router: {
     linkExactActiveClass: 'is-active'
   },
-  loading: { color: '#63CD6D' },
   modules: ['@nuxtjs/axios', '@nuxtjs/font-awesome', '@nuxtjs/pwa'],
   css: [
     { src: '~assets/main.scss', lang: 'scss' },
-    { src: '~/assets/reset.css' }
+    { src: '~/assets/reset.css' },
+    { src: 'loaders.css' }
   ],
   build: {
     extend(config, { isDev, isClient }) {

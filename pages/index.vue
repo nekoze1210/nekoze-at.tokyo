@@ -92,6 +92,8 @@ export default {
   border-radius: 4px;
   box-shadow: 4px 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-size: cover;
+  background-position: center;
+  transition-duration: 0.3s;
 
   &::before {
     background-color: rgba(0, 0, 0, 0.3);
@@ -101,6 +103,12 @@ export default {
     bottom: 0;
     left: 0;
     content: ' ';
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
   }
 
   &-content {
