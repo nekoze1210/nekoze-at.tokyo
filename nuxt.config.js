@@ -59,7 +59,11 @@ module.exports = {
       }
     }
   },
-  plugins: ['./plugins/contentful.js', './plugins/tag_mapper.js'],
+  plugins: [
+    './plugins/contentful.js',
+    './plugins/tag_mapper.js',
+    { src: '~plugins/ga.js', ssr: false }
+  ],
   generate: {
     routes() {
       return client

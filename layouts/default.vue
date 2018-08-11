@@ -11,7 +11,7 @@ import AppHeader from '~/components/AppHeader'
 export default {
   head() {
     return {
-      titleTemplate: '%s | Do What Works'
+      titleTemplate: '%s | nekoze-at.tokyo'
     }
   },
   components: { AppHeader }
