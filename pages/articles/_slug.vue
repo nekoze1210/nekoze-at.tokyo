@@ -95,8 +95,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post {
+  font-family: Arial, Avenir;
   margin: 1rem 0;
 }
 
