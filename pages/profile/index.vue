@@ -44,24 +44,41 @@
     <h2 class="profile__heading">Introduction</h2>
     <hr class="profile__ruler">
     <div class="columns">
-      <div class="column">WIP</div>
+      <div class="column">
+        <div class="content">
+          <p>
+            はじめまして。長岡 大樹(ながおか だいき) と申します。<br>
+            新卒で大手飲食系WEBサービスを開発する企業へ入社し、会員向けの基盤システムを開発してきました。<br>
+            1年半の業務経験を経て、モダンな開発やユーザー目線でのサービスの開発がしたく、2018年9月に自動車関連のベンチャー企業に転職します。<br>
+            プログラミング言語は Java が業務経験上最も多く開発していますが、プライベートではRuby, PHP, Vue.js, React など流行っている＆興味のある分野にとことん取り組んでいます。
+          </p>
+        </div>
+      </div>
     </div>
 
     <h2 class="profile__heading">Skills</h2>
     <hr class="profile__ruler">
-    <div class="content">
-      <h3>Programming Language</h3>
-      <li>Ruby</li>
-      <li>Java</li>
-      <li>Golang</li>
-      <li>Swift</li>
-      <li>Node.js</li>
-      <h3>Frameworks</h3>
-      <li>Ruby on Rails</li>
-      <li>Play Framework</li>
-      <li>Spring Boot</li>
-      <li>Nuxt.js</li>
-      <li>Express</li>
+    <div class="columns">
+      <div class="column is-half">
+        <div class="content">
+          <h3 class="subtitle">Programming Language</h3>
+          <li>Ruby</li>
+          <li>Java</li>
+          <li>Golang</li>
+          <li>Swift</li>
+          <li>Node.js</li>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <h3 class="subtitle">Framework</h3>
+          <li>Ruby on Rails</li>
+          <li>Play Framework</li>
+          <li>Spring Boot</li>
+          <li>Nuxt.js</li>
+          <li>Express</li>
+        </div>
+      </div>
     </div>
 
     <h2 class="profile__heading">Works</h2>
@@ -71,7 +88,6 @@
     <h2 class="profile__heading">Awards</h2>
     <hr class="profile__ruler">
     <p>WIP</p>
-
   </div>
 </template>
 
@@ -81,7 +97,8 @@ export default {}
 
 <style lang="scss" scoped>
 .profile__heading {
-  margin-top: 1.5em;
+  margin: 1.5em 10px 0;
+
   font-family: Avenir;
   font-size: 50px;
   font-weight: 900;
@@ -95,6 +112,8 @@ export default {}
 
 .profile__ruler {
   border: solid 1px #707070;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .profile__about {
@@ -158,5 +177,13 @@ export default {}
   p:first-child {
     margin-top: 40px;
   }
+  @media screen and (min-width: 200px) and (max-width: 1000px) {
+    p:first-child {
+      margin-top: 20px;
+    }
+  }
+}
+.content {
+  padding: 12px;
 }
 </style>
