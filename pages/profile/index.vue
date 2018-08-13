@@ -185,5 +185,7 @@ export default {}
 }
 .content {
   padding: 12px;
+  font-family: Arial, Avenir;
+  line-height: 1.5em;
 }
 </style>
