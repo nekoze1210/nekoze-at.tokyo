@@ -6,14 +6,14 @@
 .navbar-item-logo {
   object-fit: contain;
   font-family: Avenir;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.36;
   letter-spacing: normal;
   text-align: left;
-  color: #97deb8 !important;
+  color: #247e55 !important;
 }
 
 @media screen and (min-width: 200px) and (max-width: 1000px) {
