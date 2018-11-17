@@ -1,12 +1,13 @@
-const contentful = require('contentful')
-const tagMapper = require('./plugins/tag_mapper')
-const config = require('./.contentful.json')
+import contentful from 'contentful'
+import tagMapper from './plugins/tag_mapper'
+import config from './.contentful.json'
+
 const client = contentful.createClient({
   space: config.CTF_SPACE_ID,
   accessToken: config.CTF_CDA_ACCESS_TOKEN
 })
 
-module.exports = {
+export default {
   loading: '~/components/Loading.vue',
   head: {
     title: 'nekoze-at.tokyo',
