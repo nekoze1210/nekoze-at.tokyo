@@ -65,7 +65,11 @@ export default {
       }
     }
   },
-  plugins: ['./plugins/contentful.js', './plugins/tag_mapper.js'],
+  plugins: [
+    './plugins/contentful.js',
+    './plugins/tag_mapper.js',
+    './plugins/vue-particle.js'
+  ],
   generate: {
     routes() {
       return client

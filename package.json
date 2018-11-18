@@ -22,7 +22,6 @@
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "contentful": "^7.0.5",
-    "contentful-migration": "^0.15.0",
     "global": "^4.3.2",
     "loaders.css": "^0.1.2",
     "luxon": "^1.2.0",
@@ -44,6 +43,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.0.0",
     "postcss-cssnext": "^3.1.0",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "vue-particle": "^1.0.0"
   }
 }
