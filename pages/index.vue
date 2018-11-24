@@ -1,15 +1,25 @@
 <template>
   <div>
-    <div class="columns">
-      <div class="column is-full"><profile/></div>
-      <div class="column is-full"><skills /></div>
+    <Particles/>
+    <div class="hero is-fullheight" id="about">
+      <div class="hero-body">
+        <div class="container">
+          <profile />
+        </div>
+      </div>
+    </div>
+    <div class="columns is-marginless" id='skills'>
+      <skills />
     </div>
   </div>
+  
 </template>
 
 <script>
 import contentful from '~/plugins/contentful'
+import Particles from '~/components/Particles'
 import Profile from '~/components/Profile'
+import ScrollDown from '~/components/ScrollDown'
 import Skills from '~/components/SKills'
 
 const client = contentful.createClient()
@@ -40,6 +50,12 @@ export default {
       })
       .catch(console.error)
   },
-  components: { Profile, Skills }
+  components: { Profile, Skills, ScrollDown, Particles }
 }
 </script>
+
+<style lang="scss" scoped>
+.is-fullheight {
+  min-height: 100vh;
+}
+</style>

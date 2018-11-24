@@ -30,6 +30,7 @@
     "markdown-it-link-attributes": "^2.1.0",
     "node-sass": "^4.9.0",
     "nuxt": "^2.2.0",
+    "particles.js": "^2.0.0",
     "postcss-preset-env": "^5.3.0",
     "prismjs": "^1.14.0",
     "sass-loader": "^7.0.1",

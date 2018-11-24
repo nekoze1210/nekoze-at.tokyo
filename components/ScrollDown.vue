@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <a href="#"><span></span></a>
-  </div>
+  <a v-scroll-to="'#skills'"><span></span></a>
 </template>
 
 <script>

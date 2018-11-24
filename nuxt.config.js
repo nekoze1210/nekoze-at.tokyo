@@ -68,7 +68,6 @@ export default {
   plugins: [
     './plugins/contentful.js',
     './plugins/tag_mapper.js',
-    './plugins/vue-particle.js',
     './plugins/vue-scrollto.js'
   ],
   generate: {
