@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import AppHeader from '~/components/AppHeader'
+import AppHeader from "~/components/AppHeader";
 
 export default {
   head() {
     return {
-      titleTemplate: '%s | nekoze-at.tokyo'
-    }
+      titleTemplate: "nekoze-at.tokyo"
+    };
   },
   components: { AppHeader }
-}
+};
 </script>
