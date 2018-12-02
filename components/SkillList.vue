@@ -1,8 +1,8 @@
 <template>
   <div class="columns is-mobile is-multiline">
-    <a @click="showDetail(skill)" class="column" v-for="skill in skills" :key="skill.name">
+    <a @click="selectSkill(skill)" class="column" v-for="skill in skills" :key="skill.name">
       <figure class="image is-96x96">
-        <img :src="skill.icon" :alt="skill.name">
+        <img :src="skillIconColor(skill)" :alt="skill.name" :id="skill.name">
       </figure>
     </a>
   </div>
@@ -10,47 +10,22 @@
 
 <script>
 export default {
-  name: 'SkillList',
-  data() {
-    return {
-      skills: [
-        {
-          name: 'Ruby',
-          icon: require('~/assets/skill_icons/ruby.svg')
-        },
-        {
-          name: 'Java',
-          icon: require('~/assets/skill_icons/java.svg')
-        },
-        {
-          name: 'PHP',
-          icon: require('~/assets/skill_icons/php.svg')
-        },
-        {
-          name: 'Swift',
-          icon: require('~/assets/skill_icons/swift.svg')
-        },
-        {
-          name: 'Sass',
-          icon: require('~/assets/skill_icons/sass.svg')
-        },
-        {
-          name: 'React',
-          icon: require('~/assets/skill_icons/react.svg')
-        },
-        {
-          name: 'Javascript',
-          icon: require('~/assets/skill_icons/javascript.svg')
-        }
-      ]
-    }
-  },
+  name: "SkillList",
+  props: ["skills"],
   methods: {
-    showDetail(skill) {
-      console.log(skill.name)
+    selectSkill(skill) {
+      this.$emit("changeSkill", skill);
+    },
+    togglePathColor(color) {
+      return "--color: " + color;
+    },
+    skillIconColor(skill) {
+      return this.$store.state.skill.name === skill.name
+        ? skill.icon_color
+        : skill.icon;
     }
   }
-}
+};
 </script>
 
 <style scoped>

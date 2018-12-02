@@ -3,25 +3,108 @@
     <div class="container has-text-centered">
       <h3>Skills & Works</h3>
       <h4>こんなことできます & しました</h4>
-      <skill-list />
-      <divider />
-      <skill-detail />
+      <skill-list @changeSkill="changeSkill" :skills="skills"/>
+      <divider/>
+      <skill-detail :skill="selectedSkill"/>
+      <works/>
+      <work-detail/>
     </div>
   </div>
 </template>
 
 <script>
-import Divider from '~/components/Divider'
-import SkillList from '~/components/SkillList'
-import SkillDetail from '~/components/SkillDetail'
+import Divider from "~/components/Divider";
+import SkillList from "~/components/SkillList";
+import SkillDetail from "~/components/SkillDetail";
+import Works from "~/components/Works";
+import WorkDetail from "~/components/WorkDetail";
 
 export default {
-  name: 'Skills',
+  name: "Skills",
   data() {
-    return {}
+    return {
+      skills: [
+        {
+          name: "Ruby",
+          icon: require("~/assets/skill_icons/ruby.svg"),
+          icon_color: require("~/assets/skill_icons/ruby_color.svg"),
+          period: "約2年",
+          stars: 3,
+          color: "#f82020"
+        },
+        {
+          name: "Java",
+          icon: require("~/assets/skill_icons/java.svg"),
+          icon_color: require("~/assets/skill_icons/java_color.svg"),
+          period: "約1年",
+          stars: 3,
+          color: "#DD9038"
+        },
+        {
+          name: "PHP",
+          icon: require("~/assets/skill_icons/php.svg"),
+          icon_color: require("~/assets/skill_icons/php_color.svg"),
+          period: "約5ヶ月",
+          stars: 2,
+          color: "#637EB1"
+        },
+        {
+          name: "Swift",
+          icon: require("~/assets/skill_icons/swift.svg"),
+          icon_color: require("~/assets/skill_icons/swift_color.svg"),
+          period: "約2ヶ月",
+          stars: 1,
+          color: "#E54C2E"
+        },
+        {
+          name: "Sass",
+          icon: require("~/assets/skill_icons/sass.svg"),
+          icon_color: require("~/assets/skill_icons/sass_color.svg"),
+          period: "約2年",
+          stars: 3,
+          color: "#B96790"
+        },
+        {
+          name: "React",
+          icon: require("~/assets/skill_icons/react.svg"),
+          icon_color: require("~/assets/skill_icons/react_color.svg"),
+          period: "約3ヶ月",
+          stars: 1,
+          color: "#80D8F7"
+        },
+        {
+          name: "Javascript",
+          icon: require("~/assets/skill_icons/javascript.svg"),
+          icon_color: require("~/assets/skill_icons/javascript_color.svg"),
+          period: "約2年",
+          stars: 3,
+          color: "#F4DE50"
+        }
+      ]
+    };
   },
-  components: { SkillList, SkillDetail, Divider }
-}
+  computed: {
+    selectedSkill: {
+      get() {
+        return this.$store.state.skill;
+      }
+    },
+    selectedWork: {
+      get() {
+        return this.$store.state.work;
+      }
+    }
+  },
+  methods: {
+    changeSkill(skill) {
+      this.$store.commit("changeSkillDetail", skill);
+    }
+  },
+  mounted() {
+    this.$store.commit("changeSkillDetail", this.skills[0]);
+  },
+  components: { SkillList, SkillDetail, Divider, Works, WorkDetail }
+};
 </script>
 
 <style lang="scss" scoped>
