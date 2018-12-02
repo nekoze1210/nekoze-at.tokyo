@@ -1,40 +1,40 @@
-import Vuex from 'vuex'
+export const state = () => ({
+  isMenuActive: false,
+  isModalActive: false,
+  skill: {
+    name: '',
+    stars: 0,
+    color: '',
+    period: ''
+  },
+  work: {
+    name: '',
+    url: '',
+    technology: '',
+    thumbnail: '',
+    teg: '',
+    period: '',
+    detail: ''
+  }
+})
 
-const store = () =>
-  new Vuex.Store({
-    state: {
-      isMenuActive: false
-    },
-    mutations: {
-      toggleMenu(state) {
-        state.isMenuActive = !state.isMenuActive
-      },
-      resetMenu(state) {
-        state.isMenuActive = false
-      }
-    }
-  })
-
-export default store
-
-// export const state = () => ({
-//   isMenuActive: false
-// })
-
-// export const mutations = () => ({
-//   toggleMenu(state) {
-//     state.isMenuActive = !state.isMenuActive
-//   },
-//   resetMenu(state) {
-//     state.isMenuActive = false
-//   }
-// })
-
-// export const actions = () => ({
-//   toggleMenu ({commit}) {
-//     commit('toggleMenu')
-//   },
-//   resetMenu({commit}) {
-//     commit('resetMenu')
-//   }
-// })
+export const mutations = {
+  changeSkillDetail(state, payload) {
+    state.skill = payload
+  },
+  changeWorkDetail(state, payload) {
+    state.work = payload
+  },
+  toggleMenu(state) {
+    state.isMenuActive = !state.isMenuActive
+  },
+  resetMenu(state) {
+    state.isMenuActive = false
+  },
+  toggleModal(state) {
+    state.isModalActive = !state.isModalActive
+  },
+  resetModalContent(state) {
+    state.isModalActive = false
+  }
+}
