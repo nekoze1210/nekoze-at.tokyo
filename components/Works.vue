@@ -22,17 +22,18 @@ export default {
           technology: "Ruby on Rails/Ruby",
           thumbnail: "",
           period: "2ヶ月",
-          detail: "",
+          detail:
+            "<u>『落とし物を落とさせない。失くさない習慣をつける』</u><br><br>自分のモノを登録できるWEBアプリを開発",
           tag: "Ruby"
         },
         {
-          name: "MonoCabinet2",
-          url: "https://otoshimonno.herokuapp.com/222",
-          technology: "Ruby on Rails/Ruby",
+          name: "nekoze-at.tokyo",
+          url: "https://nekoze-at.tokyo",
+          technology: "Vue/Nuxt.js",
           thumbnail: "",
-          period: "2ヶ月",
+          period: "1ヶ月",
           detail: "",
-          tag: "Ruby"
+          tag: "Vue"
         }
       ]
     };
