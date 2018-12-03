@@ -25,7 +25,7 @@ import contentful from "~/plugins/contentful.js";
 import Particles from "~/components/Particles.vue";
 import Profile from "~/components/Profile.vue";
 import ScrollDown from "~/components/ScrollDown.vue";
-import Skills from "~/components/SKills.vue";
+import Skills from "~/components/Skills.vue";
 import Articles from "~/components/Articles.vue";
 import Contacts from "~/components/Contacts.vue";
 
