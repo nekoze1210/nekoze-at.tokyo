@@ -21,13 +21,13 @@
 </template>
 
 <script>
-import contentful from "~/plugins/contentful";
-import Particles from "~/components/Particles";
-import Profile from "~/components/Profile";
-import ScrollDown from "~/components/ScrollDown";
-import Skills from "~/components/SKills";
-import Articles from "~/components/Articles";
-import Contacts from "~/components/Contacts";
+import contentful from "~/plugins/contentful.js";
+import Particles from "~/components/Particles.vue";
+import Profile from "~/components/Profile.vue";
+import ScrollDown from "~/components/ScrollDown.vue";
+import Skills from "~/components/SKills.vue";
+import Articles from "~/components/Articles.vue";
+import Contacts from "~/components/Contacts.vue";
 
 const client = contentful.createClient();
 export default {

@@ -7,12 +7,21 @@
         <div class="container is-fluid">
           <div class="columns is-multiline">
             <div class="column is-half" v-for="post in posts" :key="post.fields.slug">
-              <div class="card" :style="{ 'background-image': 'url(' + post.fields.hero_image.fields.file.url +')' }">
+              <div
+                class="card"
+                :style="{ 'background-image': 'url(' + post.fields.hero_image.fields.file.url +')' }"
+              >
                 <div class="card-content">
-                  <p class="title"><nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">{{ post.fields.title }}</nuxt-link></p>
+                  <p class="title">
+                    <nuxt-link
+                      :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}"
+                    >{{ post.fields.title }}</nuxt-link>
+                  </p>
                   <p class="subtitle">{{ ( new Date(post.fields.published)).toDateString() }}</p>
                   <div class="tags">
-                    <span v-for="tag in post.fields.tags" :key="tag" class="tag"><nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}"> #{{ tag }}</nuxt-link></span>
+                    <span v-for="tag in post.fields.tags" :key="tag" class="tag">
+                      <nuxt-link :to="{ name: 'tags-tag', params: { tag: tag }}">#{{ tag }}</nuxt-link>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -26,46 +35,46 @@
       <div class="sponsor">
         <h2 class="sponsor__heading">Ads</h2>
         <hr class="sponsor__ruler">
-        <adsbygoogle />
+        <adsbygoogle/>
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import profile from '~/components/Profile.vue'
-import { createClient } from '~/plugins/contentful.js'
+import profile from "~/components/Profile.vue";
+import { createClient } from "~/plugins/contentful.js";
 
-const client = createClient()
+const client = contentful.createClient();
 export default {
   fetch({ store }) {
-    store.commit('resetMenu')
+    store.commit("resetMenu");
   },
   head() {
     return {
-      title: 'Top'
-    }
+      title: "Top"
+    };
   },
   data() {
     return {
       posts: []
-    }
+    };
   },
   asyncData({ env }) {
     return client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
-        order: '-fields.published'
+        order: "-fields.published"
       })
       .then(entries => {
         return {
           posts: entries.items
-        }
+        };
       })
-      .catch(console.error)
+      .catch(console.error);
   },
   components: { profile }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -96,7 +105,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    content: ' ';
+    content: " ";
   }
 
   &:hover,

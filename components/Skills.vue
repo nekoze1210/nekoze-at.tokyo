@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import Divider from "~/components/Divider";
-import SkillList from "~/components/SkillList";
-import SkillDetail from "~/components/SkillDetail";
-import Works from "~/components/Works";
-import WorkDetail from "~/components/WorkDetail";
+import Divider from "~/components/Divider.vue";
+import SkillList from "~/components/SkillList.vue";
+import SkillDetail from "~/components/SkillDetail.vue";
+import Works from "~/components/Works.vue";
+import WorkDetail from "~/components/WorkDetail.vue";
 
 export default {
   name: "Skills",

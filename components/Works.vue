@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import WorkThumbnail from "~/components/WorkThumbnail";
+import WorkThumbnail from "~/components/WorkThumbnail.vue";
 
 export default {
   data() {
