@@ -31,11 +31,13 @@ export default {
       tags: [
         {
           name: "Ruby",
-          color: "#cc2626"
+          color: "#cc2626",
+          textColor: "#fff"
         },
         {
           name: "テキストエディタ",
-          color: "#2d8e7b"
+          color: "#2d8e7b",
+          textColor: "#fff"
         }
       ]
     };

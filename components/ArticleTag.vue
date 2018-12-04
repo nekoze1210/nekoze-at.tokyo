@@ -1,5 +1,8 @@
 <template>
-  <span :style="{ 'background-color': tag.color }" class="tag is-link">#{{ tag.name }}</span>
+  <span
+    :style="{ 'background-color': tag.color, 'color': tag.textColor }"
+    class="tag"
+  >#{{ tag.name }}</span>
 </template>
 
 <script>
