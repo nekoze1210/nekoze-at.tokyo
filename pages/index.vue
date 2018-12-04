@@ -9,13 +9,13 @@
       </div>
     </div>
     <div class="columns is-marginless" id="skills">
-      <skills style="height: 100vh;"/>
+      <skills style="min-height: 100vh;"/>
     </div>
     <div class="columns is-marginless is-mobile" id="articles">
-      <articles style="height: 100vh;"/>
+      <articles style="min-height: 100vh;"/>
     </div>
     <div class="columns is-marginless" id="contacts">
-      <contacts style="height: 100vh;"/>
+      <contacts style="min-height: 100vh;"/>
     </div>
   </div>
 </template>
