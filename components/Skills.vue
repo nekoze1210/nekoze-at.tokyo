@@ -81,6 +81,14 @@ export default {
           color: "#42b883"
         },
         {
+          name: "Kotlin",
+          icon: require("~/assets/skill_icons/kotlin.svg"),
+          icon_color: require("~/assets/skill_icons/kotlin_color.svg"),
+          period: "約10ヶ月",
+          stars: 3,
+          color: "#42b883"
+        },
+        {
           name: "Javascript",
           icon: require("~/assets/skill_icons/javascript.svg"),
           icon_color: require("~/assets/skill_icons/javascript_color.svg"),
