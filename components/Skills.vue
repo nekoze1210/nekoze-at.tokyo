@@ -73,6 +73,14 @@ export default {
           color: "#80D8F7"
         },
         {
+          name: "Vue.js",
+          icon: require("~/assets/skill_icons/vue.svg"),
+          icon_color: require("~/assets/skill_icons/vue_color.svg"),
+          period: "約10ヶ月",
+          stars: 3,
+          color: "#42b883"
+        },
+        {
           name: "Javascript",
           icon: require("~/assets/skill_icons/javascript.svg"),
           icon_color: require("~/assets/skill_icons/javascript_color.svg"),
