@@ -4,7 +4,7 @@
       <h3>Articles</h3>
       <h4>独学・仕事で学んだ知見など</h4>
     </div>
-    <article-list/>
+    <article-list :posts="posts"/>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import ArticleList from "~/components/ArticleList.vue";
 
 export default {
   name: "Articles",
+  props: ["posts"],
   components: { ArticleList }
 };
 </script>

@@ -1,15 +1,15 @@
 <template>
-  <div class="column is-half-mobile is-one-third-desktop">
+  <div class="column is-half-mobile is-half-tablet is-one-third-desktop">
     <div class="card">
       <div class="card-image">
         <figure class="image is-5by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png">
+          <img :src="post.fields.hero_image.fields.file.url">
         </figure>
       </div>
       <div class="media-content">
-        <a href="#">
-          <h3 class="title">Title</h3>
-        </a>
+        <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">
+          <h3 class="title">{{ post.fields.title }}</h3>
+        </nuxt-link>
       </div>
       <div class="content is-clearfix">
         <div class="tags is-pulled-left">
@@ -26,6 +26,7 @@ import ArticleTag from "~/components/ArticleTag.vue";
 
 export default {
   name: "ArticleThumbnail",
+  props: ["post"],
   data() {
     return {
       tags: [
@@ -60,7 +61,7 @@ export default {
     letter-spacing: normal;
     text-align: left;
     color: #707070;
-    padding: 20px 0;
+    padding: 10px 0;
     &:hover {
       color: #247e55;
       transition: 0.2s linear;

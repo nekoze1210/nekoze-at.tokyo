@@ -12,7 +12,7 @@
       <skills style="min-height: 100vh;"/>
     </div>
     <div class="columns is-marginless is-mobile" id="articles">
-      <articles style="min-height: 100vh;"/>
+      <articles style="min-height: 100vh;" :posts="posts"/>
     </div>
     <div class="columns is-marginless" id="contacts">
       <contacts style="min-height: 100vh;"/>
