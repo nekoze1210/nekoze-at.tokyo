@@ -65,6 +65,14 @@ export default {
           color: "#B96790"
         },
         {
+          name: "Javascript",
+          icon: require("~/assets/skill_icons/javascript.svg"),
+          icon_color: require("~/assets/skill_icons/javascript_color.svg"),
+          period: "約2年",
+          stars: 3,
+          color: "#F4DE50"
+        },
+        {
           name: "React",
           icon: require("~/assets/skill_icons/react.svg"),
           icon_color: require("~/assets/skill_icons/react_color.svg"),
@@ -84,17 +92,9 @@ export default {
           name: "Kotlin",
           icon: require("~/assets/skill_icons/kotlin.svg"),
           icon_color: require("~/assets/skill_icons/kotlin_color.svg"),
-          period: "約10ヶ月",
-          stars: 3,
-          color: "#42b883"
-        },
-        {
-          name: "Javascript",
-          icon: require("~/assets/skill_icons/javascript.svg"),
-          icon_color: require("~/assets/skill_icons/javascript_color.svg"),
-          period: "約2年",
-          stars: 3,
-          color: "#F4DE50"
+          period: "約1ヶ月",
+          stars: 1,
+          color: "#4E6698"
         }
       ]
     };
