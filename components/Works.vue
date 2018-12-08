@@ -1,11 +1,13 @@
 <template>
-  <div class="columns is-mobile has-text-left">
-    <work-thumbnail
-      class="column is-one-third"
-      v-for="(work, index) in works"
-      :key="index"
-      :work="work"
-    />
+  <div class="container">
+    <div class="columns is-multiline is-mobile">
+      <work-thumbnail
+        v-for="(work, index) in works"
+        :key="index"
+        :work="work"
+        v-show="isTagged(work)"
+      />
+    </div>
   </div>
 </template>
 
@@ -20,7 +22,7 @@ export default {
           name: "MonoCabinet",
           url: "https://otoshimonno.herokuapp.com/",
           technology: "Ruby on Rails/Ruby",
-          thumbnail: "",
+          thumbnail: require("~/assets/work_thumbnails/monocabinet.png"),
           period: "2ヶ月",
           detail:
             "<u>『落とし物を落とさせない。失くさない習慣をつける』</u><br><br>自分のモノを登録できるWEBアプリを開発",
@@ -30,13 +32,20 @@ export default {
           name: "nekoze-at.tokyo",
           url: "https://nekoze-at.tokyo",
           technology: "Vue/Nuxt.js",
-          thumbnail: "",
+          thumbnail: require("~/assets/work_thumbnails/myblog.png"),
           period: "1ヶ月",
           detail: "",
-          tag: "Vue"
+          tag: "Vue.js"
         }
       ]
     };
+  },
+  methods: {
+    isTagged(work) {
+      if (this.$store.state.skill.name === work.tag) {
+        return true;
+      }
+    }
   },
   components: { WorkThumbnail }
 };

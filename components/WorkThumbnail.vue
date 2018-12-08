@@ -1,9 +1,12 @@
 <template>
-  <div>
+  <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3" @click="clickWork(work)">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+          <img
+            :src="work.thumbnail ? work.thumbnail : 'https://bulma.io/images/placeholders/1280x960.png'"
+            :alt="work.name"
+          >
         </figure>
       </div>
     </div>
@@ -21,6 +24,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
