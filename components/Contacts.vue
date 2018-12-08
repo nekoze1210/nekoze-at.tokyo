@@ -5,7 +5,11 @@
       <h4>お仕事相談したい方・会いたい方、ぜひ</h4>
       <script src="https://sdk.form.run/js/v2/embed.js"></script>
       <div class="form-run">
-        <div class="formrun-embed" data-formrun-form="@nekoze-at-tokyo"></div>
+        <div
+          class="formrun-embed"
+          data-formrun-form="@nekoze-at-tokyo"
+          data-formrun-redirect="true"
+        ></div>
       </div>
     </div>
   </div>
