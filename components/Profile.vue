@@ -1,7 +1,8 @@
 <template>
   <div class="columns">
     <div class="column has-text-right">
-      <h1 class="profile__myname">{{ myName }}</h1><br>
+      <h1 class="profile__myname">{{ myName }}</h1>
+      <br>
       <h2 class="profile__myjob">{{ myJob }}</h2>
     </div>
     <div class="column">
@@ -14,14 +15,14 @@
 
 <script>
 export default {
-  name: 'Profile',
+  name: "Profile",
   data() {
     return {
-      myName: 'Daiki Nagaoka',
-      myJob: 'Web Developer'
-    }
+      myName: "Daiki Nagaoka",
+      myJob: "Server Side Engineer"
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
