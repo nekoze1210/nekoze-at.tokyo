@@ -8,7 +8,7 @@
             <div class="column is-half">
               <figure class="image">
                 <img
-                  src="https://bulma.io/images/placeholders/1280x960.png"
+                  :src="selectedWork.thumbnail ? selectedWork.thumbnail : 'https://bulma.io/images/placeholders/1280x960.png'"
                   alt="Placeholder image"
                 >
               </figure>
