@@ -86,7 +86,7 @@ export default {
   }
 
   .title {
-    font-family: YuGo;
+    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -99,7 +99,7 @@ export default {
   }
 
   .posted_date {
-    font-family: YuGo;
+    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 13px;
     font-style: normal;
     font-stretch: normal;

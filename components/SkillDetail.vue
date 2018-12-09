@@ -2,7 +2,9 @@
   <div class="columns has-text-left is-multiline">
     <div class="column">
       <h3 class="skill__name" :style="{ color: skill.color }">{{ skill.name }}</h3>
-      <span class="icon is-medium" v-for="(star, index) in skill.stars" :key="index"><i class="fa fa-lg fa-star checked"></i></span>
+      <span class="icon is-medium" v-for="(star, index) in skill.stars" :key="index">
+        <i class="fa fa-lg fa-star checked"></i>
+      </span>
       <p class="skill__period is-spaced">使用期間: {{ skill.period }}</p>
       <p class="skill__works is-spaced">制作物:</p>
     </div>
@@ -11,9 +13,9 @@
 
 <script>
 export default {
-  name: 'SkillDetail',
-  props: ['skill']
-}
+  name: "SkillDetail",
+  props: ["skill"]
+};
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +33,7 @@ export default {
   }
 
   &__period {
-    font-family: YuGo;
+    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -44,7 +46,7 @@ export default {
   }
 
   &__works {
-    font-family: YuGo;
+    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;

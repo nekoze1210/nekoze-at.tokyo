@@ -29,7 +29,7 @@ export default {
 
 <style lang="scss" scoped>
 .tag {
-  font-family: YuGo;
+  font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   font-size: 13px;
   font-weight: bold;
   font-style: normal;
