@@ -48,7 +48,6 @@ export default {
   },
   setTagColors(tag) {
     if (Object.keys(tagColorList).includes(tag)) {
-      console.log(tagColorList[tag].textColor)
       let colorSet = {
         backgroundColor: tagColorList[tag].backgroundColor,
         textColor: tagColorList[tag].textColor
