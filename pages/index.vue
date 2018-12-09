@@ -5,6 +5,7 @@
       <div class="hero-body">
         <div class="container">
           <profile/>
+          <scroll-down/>
         </div>
       </div>
     </div>
