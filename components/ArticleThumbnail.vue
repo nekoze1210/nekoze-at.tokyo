@@ -1,16 +1,18 @@
 <template>
   <div class="column is-half-mobile is-half-tablet is-one-third-desktop">
     <div class="card" @mouseover="overlayColorEnable" @mouseleave="overlayColorDisable">
-      <div class="card-image">
-        <figure class="image is-5by3">
-          <img :src="post.fields.hero_image.fields.file.url">
-        </figure>
-        <div
-          class="is-overlay"
-          style="opacity: 0.4; transition: 0.2s linear;"
-          :style="{'background-color': overlayColor}"
-        ></div>
-      </div>
+      <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}" exact>
+        <div class="card-image">
+          <figure class="image is-5by3">
+            <img :src="post.fields.hero_image.fields.file.url">
+          </figure>
+          <div
+            class="is-overlay"
+            style="opacity: 0.4; transition: 0.2s linear;"
+            :style="{'background-color': overlayColor}"
+          ></div>
+        </div>
+      </nuxt-link>
       <div class="media-content">
         <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">
           <h3 class="title">{{ post.fields.title }}</h3>
