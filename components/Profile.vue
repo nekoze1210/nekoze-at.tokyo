@@ -1,70 +1,65 @@
 <template>
-  <div class="profile">
-    <h2 class="profile__heading">Profile</h2>
-    <hr class="profile__ruler">
-    <figure class="image profile__avatar">
-      <img src="~/assets/profile.jpg" alt="@cuten77" class="is-rounded">
-    </figure>
-    <h3 class="is-3 profile__myname">Daiki Nagaoka</h3>
-    <p>Web Engineer</p>
-    <nuxt-link to="/profile" class="button is-fullwidth">more...</nuxt-link>
+  <div class="columns">
+    <div class="column has-text-right">
+      <h1 class="profile__myname">{{ myName }}</h1>
+      <br>
+      <h2 class="profile__myjob">{{ myJob }}</h2>
+    </div>
+    <div class="column">
+      <figure class="image profile__avatar">
+        <img src="~/assets/profile.jpg" alt="@cuten77" class="is-rounded">
+      </figure>
+    </div>
   </div>
 </template>
 
 <script>
+import ScrollDown from "~/components/ScrollDown.vue";
+
 export default {
-  name: 'Profile'
-}
+  name: "Profile",
+  data() {
+    return {
+      myName: "Daiki Nagaoka",
+      myJob: "Server Side Engineer"
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
 .profile {
-  margin-top: 3.5em;
-
-  &__heading {
-    width: 177px;
-    font-family: Avenir;
-    font-size: 50px;
-    font-weight: 900;
-    font-style: oblique;
-    font-stretch: normal;
-    line-height: 1.36;
-    letter-spacing: normal;
-    text-align: left;
-    color: #434040;
-  }
-
-  &__ruler {
-    border: solid 1px #707070;
-  }
+  text-align: center;
 
   &__avatar {
     width: 204px;
-    height: 214px;
-    margin: 0 auto;
-    img {
-      box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.16);
-      border: solid 1px #707070;
-    }
+    height: 204px;
   }
+
   &__myname {
-    font-family: Avenir;
-    font-size: 25px;
-    font-weight: 500;
+    display: inline-block;
+    text-align: left;
+    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.36;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000000;
+    line-height: 1.7;
+    letter-spacing: 3px;
+    color: #444444;
   }
-}
 
-.button {
-  margin-top: 30px;
-  text-align: right;
-  font-family: Avenir;
-  font-weight: 500;
-  font-stretch: normal;
+  &__myjob {
+    display: inline-block;
+    text-align: left;
+    font-family: Avenir, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.35;
+    letter-spacing: 2px;
+    color: #707070;
+  }
 }
 </style>

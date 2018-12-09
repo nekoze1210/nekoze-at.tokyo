@@ -1,19 +1,20 @@
-const contentful = require('contentful')
-const tagMapper = require('./plugins/tag_mapper')
-const config = require('./.contentful.json')
+import contentful from 'contentful'
+import tagMapper from './plugins/tag_mapper.js'
+import config from './.contentful.json'
+
 const client = contentful.createClient({
   space: config.CTF_SPACE_ID,
   accessToken: config.CTF_CDA_ACCESS_TOKEN
 })
 
-module.exports = {
+export default {
   loading: '~/components/Loading.vue',
   head: {
     title: 'nekoze-at.tokyo',
     htmlAttrs: {
       lang: 'ja'
     },
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
       { name: 'nekoze-at.tokyo', content: 'nekoze-at.tokyo' },
@@ -64,7 +65,11 @@ module.exports = {
       }
     }
   },
-  plugins: ['./plugins/contentful.js', './plugins/tag_mapper.js'],
+  plugins: [
+    './plugins/contentful.js',
+    './plugins/tag_mapper.js',
+    './plugins/vue-scrollto.js'
+  ],
   generate: {
     routes() {
       return client
