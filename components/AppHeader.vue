@@ -16,10 +16,7 @@
     </div>
     <div id="sideMenu" class="navbar-menu" :class="{ 'is-active' : $store.state.isMenuActive }">
       <div class="navbar-end">
-        <nuxt-link to="/#about" class="navbar-item is-tab" exact>About</nuxt-link>
-        <nuxt-link to="/#skills" class="navbar-item is-tab" exact>Skills & Works</nuxt-link>
-        <nuxt-link to="/#articles" class="navbar-item is-tab" exact>Articles</nuxt-link>
-        <nuxt-link to="/#contacts" class="navbar-item is-tab" exact>Contacts</nuxt-link>
+        <nuxt-link to="/" class="navbar-item is-tab" exact>TOP</nuxt-link>
       </div>
     </div>
   </nav>
