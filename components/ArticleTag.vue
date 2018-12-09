@@ -1,9 +1,13 @@
 <template>
-  <nuxt-link
+  <span
+    class="tag"
+    :style="{ 'background-color': tagColors.backgroundColor, 'color': tagColors.textColor }"
+  >#{{ tag }}</span>
+  <!-- <nuxt-link
     :to="{ path: 'tags/' + tag }"
     class="tag"
     :style="{ 'background-color': tagColors.backgroundColor, 'color': tagColors.textColor }"
-  >#{{ tag }}</nuxt-link>
+  >#{{ tag }}</nuxt-link>-->
 </template>
 
 <script>
