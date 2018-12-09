@@ -1,6 +1,6 @@
 <template>
   <div class="column is-full-mobile is-half-tablet is-one-third-desktop">
-    <div class="card">
+    <a class="card">
       <div class="card-image">
         <figure class="image is-4by3" @click="clickWork(work)">
           <img
@@ -9,7 +9,7 @@
           >
         </figure>
       </div>
-    </div>
+    </a>
   </div>
 </template>
 
