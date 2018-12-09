@@ -1,14 +1,25 @@
 <template>
-  <span
-    :style="{ 'background-color': tag.color, 'color': tag.textColor }"
+  <nuxt-link
+    :to="{ path: 'tags/' + tag }"
     class="tag"
-  >#{{ tag.name }}</span>
+    :style="{ 'background-color': tagColors.backgroundColor, 'color': tagColors.textColor }"
+  >#{{ tag }}</nuxt-link>
 </template>
 
 <script>
+import tagMapper from "~/plugins/tag_mapper.js";
+
 export default {
   name: "ArticleTag",
-  props: ["tag"]
+  props: ["tag"],
+  data() {
+    return {
+      tagColors: ""
+    };
+  },
+  mounted() {
+    this.tagColors = tagMapper.setTagColors(this.tag.toLowerCase());
+  }
 };
 </script>
 
@@ -21,6 +32,5 @@ export default {
   font-stretch: normal;
   line-height: 1.77;
   letter-spacing: normal;
-  color: #ffffff;
 }
 </style>
