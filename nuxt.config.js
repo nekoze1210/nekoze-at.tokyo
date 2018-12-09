@@ -1,5 +1,5 @@
 import contentful from 'contentful'
-import tagMapper from './plugins/tag_mapper'
+import tagMapper from './plugins/tag_mapper.js'
 import config from './.contentful.json'
 
 const client = contentful.createClient({
