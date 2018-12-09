@@ -14,7 +14,7 @@ export default {
     htmlAttrs: {
       lang: 'ja'
     },
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
       { name: 'nekoze-at.tokyo', content: 'nekoze-at.tokyo' },
