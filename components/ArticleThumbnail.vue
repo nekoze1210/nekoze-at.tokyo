@@ -1,10 +1,15 @@
 <template>
   <div class="column is-half-mobile is-half-tablet is-one-third-desktop">
-    <div class="card">
+    <div class="card" @mouseover="overlayColorEnable" @mouseleave="overlayColorDisable">
       <div class="card-image">
         <figure class="image is-5by3">
           <img :src="post.fields.hero_image.fields.file.url">
         </figure>
+        <div
+          class="is-overlay"
+          style="opacity: 0.4; transition: 0.2s linear;"
+          :style="{'background-color': overlayColor}"
+        ></div>
       </div>
       <div class="media-content">
         <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">
@@ -15,7 +20,9 @@
         <div class="tags is-pulled-left">
           <article-tag v-for="(tag, index) in tags" :key="index" :tag="tag" class="has-text-left"/>
         </div>
-        <span class="is-pulled-right posted_date">2018-12-01</span>
+        <span
+          class="is-pulled-right posted_date"
+        >{{ ( new Date(post.fields.published)).toDateString() }}</span>
       </div>
     </div>
   </div>
@@ -40,8 +47,17 @@ export default {
           color: "#2d8e7b",
           textColor: "#fff"
         }
-      ]
+      ],
+      overlayColor: ""
     };
+  },
+  methods: {
+    overlayColorEnable() {
+      this.overlayColor = "#2d8e7b";
+    },
+    overlayColorDisable() {
+      this.overlayColor = "";
+    }
   },
   components: { ArticleTag }
 };
@@ -50,6 +66,17 @@ export default {
 <style lang="scss" scoped>
 .card {
   box-shadow: none;
+
+  &:hover {
+    .image.is-5by3 img {
+      transform: scale(1.1);
+    }
+    .title,
+    .posted_date {
+      color: #247e55;
+      transition: 0.2s linear;
+    }
+  }
 
   .title {
     font-family: YuGo;
@@ -62,10 +89,6 @@ export default {
     text-align: left;
     color: #707070;
     padding: 10px 0;
-    &:hover {
-      color: #247e55;
-      transition: 0.2s linear;
-    }
   }
 
   .posted_date {
@@ -76,6 +99,13 @@ export default {
     line-height: 1.77;
     letter-spacing: normal;
     color: #707070;
+  }
+
+  .image.is-5by3 {
+    overflow: hidden;
+    img {
+      transition: transform 0.2s;
+    }
   }
 }
 </style>
