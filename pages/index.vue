@@ -55,7 +55,7 @@ export default {
           posts: entries.items
         };
       })
-      .catch(console.error);
+      .catch();
   },
   components: { Profile, Skills, ScrollDown, Particles, Articles, Contacts }
 };

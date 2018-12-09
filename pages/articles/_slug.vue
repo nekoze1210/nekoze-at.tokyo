@@ -76,7 +76,7 @@ export default {
           currentPost: current[0]
         };
       })
-      .catch(console.error);
+      .catch();
   },
   computed: {
     dateOrder: function() {
