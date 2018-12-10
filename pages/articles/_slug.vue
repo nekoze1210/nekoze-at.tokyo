@@ -31,6 +31,7 @@
               :to="nextPost.fields.slug"
             >{{ nextPost.fields.title }} &raquo;</nuxt-link>
           </nav>
+          <adsbygoogle/>
         </div>
       </div>
     </div>
