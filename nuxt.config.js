@@ -45,8 +45,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/font-awesome',
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-adsense'
+    '@nuxtjs/pwa'
+    // '@nuxtjs/google-adsense'
   ],
   css: [
     { src: '~assets/main.scss', lang: 'scss' },
@@ -93,9 +93,9 @@ export default {
     short_name: 'nekoze-at.tokyo',
     lang: 'ja'
   },
-  'google-adsense': {
-    id: 'ca-pub-6697069851005375'
-  },
+  // 'google-adsense': {
+  //   id: 'ca-pub-6697069851005375'
+  // },
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
