@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .columns {
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 a {
