@@ -1,10 +1,13 @@
 <template>
   <div class="column is-half-mobile is-half-tablet is-one-third-desktop">
     <div class="card" @mouseover="overlayColorEnable" @mouseleave="overlayColorDisable">
-      <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}" exact>
+      <nuxt-link
+        :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}"
+        aria-label="article"
+      >
         <div class="card-image">
           <figure class="image is-5by3">
-            <img :src="post.fields.hero_image.fields.file.url">
+            <img :src="post.fields.hero_image.fields.file.url" :alt="post.fields.slug">
           </figure>
           <div
             class="is-overlay"
