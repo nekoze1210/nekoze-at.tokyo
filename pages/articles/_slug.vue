@@ -31,7 +31,11 @@
               :to="nextPost.fields.slug"
             >{{ nextPost.fields.title }} &raquo;</nuxt-link>
           </nav>
-          <adsbygoogle/>
+          <adsbygoogle
+            :ad-slot="'8702010588'"
+            :ad-format="'fluid'"
+            :ad-layout-key="'-fb+5w+4e-db+86'"
+          />
         </div>
       </div>
     </div>
