@@ -133,7 +133,7 @@ h3 {
   line-height: 1.36;
   letter-spacing: 2.5px;
   text-align: center;
-  color: #707070;
+  color: #292929;
   margin-top: 60px;
 }
 
@@ -146,7 +146,7 @@ h4 {
   line-height: 1.33;
   letter-spacing: 1.5px;
   text-align: center;
-  color: #707070;
+  color: #292929;
   margin-top: 11.1px;
 }
 </style>

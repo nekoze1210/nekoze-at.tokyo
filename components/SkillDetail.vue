@@ -41,7 +41,7 @@ export default {
     line-height: 1.69;
     letter-spacing: 0.3px;
     text-align: left;
-    color: #707070;
+    color: #292929;
     margin-top: 33px;
   }
 
@@ -54,7 +54,7 @@ export default {
     line-height: 1.69;
     letter-spacing: 0.3px;
     text-align: left;
-    color: #707070;
+    color: #292929;
     margin-top: 10px;
   }
 }

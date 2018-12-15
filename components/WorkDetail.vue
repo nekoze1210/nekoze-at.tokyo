@@ -75,7 +75,7 @@ h4 {
   line-height: 1.38;
   letter-spacing: 1.3px;
   text-align: left;
-  color: #707070;
+  color: #292929;
   margin-top: 12px;
 }
 
@@ -88,7 +88,7 @@ p {
   line-height: 1.38;
   letter-spacing: 1.6px;
   text-align: left;
-  color: #707070;
+  color: #292929;
   margin-top: 38px;
 }
 </style>

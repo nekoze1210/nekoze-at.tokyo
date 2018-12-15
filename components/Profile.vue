@@ -59,7 +59,7 @@ export default {
     font-stretch: normal;
     line-height: 1.35;
     letter-spacing: 2px;
-    color: #707070;
+    color: #292929;
   }
 }
 </style>

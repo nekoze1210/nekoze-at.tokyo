@@ -97,7 +97,7 @@ export default {
     line-height: 1.72;
     letter-spacing: normal;
     text-align: left;
-    color: #707070;
+    color: #292929;
     padding: 10px 0;
   }
 
@@ -108,7 +108,7 @@ export default {
     font-stretch: normal;
     line-height: 1.77;
     letter-spacing: normal;
-    color: #707070;
+    color: #292929;
   }
 
   .image.is-5by3 {

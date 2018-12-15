@@ -12,7 +12,7 @@ export default {
 
 <style>
 .divider {
-  color: #707070;
+  color: #292929;
   width: 30%;
   margin: 20px auto 50px auto;
 }
