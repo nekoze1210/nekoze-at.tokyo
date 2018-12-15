@@ -26,16 +26,16 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'nekoze`s home page'
-      },
       { name: 'theme-color', content: '#63CD6D' },
       {
         property: 'og:title',
         content: 'nekoze-at.tokyo',
         hid: 'ogTitle'
+      },
+      {
+        property: 'og:image',
+        content: 'https://nekoze-at.tokyo/ogp.jpg',
+        hid: 'ogImage'
       }
     ]
   },
@@ -100,6 +100,7 @@ export default {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
     CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
+    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID,
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   }
 }
