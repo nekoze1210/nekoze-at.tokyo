@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="post">
-      <div class="column">
+      <div class="column is-paddingless">
         <div class="card-content">
           <div class="media">
             <div class="media-content">
@@ -16,7 +16,7 @@
               </div>
             </div>
           </div>
-          <div class="content article-body">
+          <div class="article-body">
             <vue-markdown class="content">{{ currentPost.fields.body }}</vue-markdown>
           </div>
           <nav class="pagination is-centered" role="navigation" aria-label="pagination">
@@ -115,6 +115,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  max-width: 800px;
+}
+
 .post {
   font-family: Arial, Avenir;
   margin: 1rem 0;
@@ -135,7 +139,6 @@ export default {
 }
 
 .content p {
-  line-height: 1.9;
   margin: 15px 0;
 }
 
@@ -159,7 +162,7 @@ div.column.is-8:first-child {
 }
 
 .article-body {
-  line-height: 1.4;
+  line-height: 200%;
 }
 
 .promo-block .container {
