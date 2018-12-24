@@ -5,7 +5,7 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <h1 class="title article-title has-text-centered">{{ currentPost.fields.title }}</h1>
+              <h1 class="title article-title has-text-left">{{ currentPost.fields.title }}</h1>
               <p
                 class="subtitle is-6 article-subtitle has-text-right"
               >{{ ( new Date(currentPost.fields.published)).toDateString() }}</p>
@@ -163,6 +163,7 @@ div.column.is-8:first-child {
 
 .article-body {
   line-height: 200%;
+  color: #2f3b4c;
 }
 
 .promo-block .container {
