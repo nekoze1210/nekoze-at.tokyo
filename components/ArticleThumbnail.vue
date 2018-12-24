@@ -46,18 +46,6 @@ export default {
   props: ["post"],
   data() {
     return {
-      tags: [
-        {
-          name: "Ruby",
-          color: "#cc2626",
-          textColor: "#fff"
-        },
-        {
-          name: "テキストエディタ",
-          color: "#2d8e7b",
-          textColor: "#fff"
-        }
-      ],
       overlayColor: ""
     };
   },
@@ -78,6 +66,9 @@ export default {
   box-shadow: none;
 
   &:hover {
+    box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
     .image.is-5by3 img {
       transform: scale(1.1);
     }
