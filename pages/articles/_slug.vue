@@ -138,10 +138,6 @@ export default {
   margin-bottom: 1rem;
 }
 
-.content p {
-  margin: 15px 0;
-}
-
 .media-content {
   margin-top: 3rem;
 }
