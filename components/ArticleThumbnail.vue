@@ -21,14 +21,12 @@
           <h3 class="title">{{ post.fields.title }}</h3>
         </nuxt-link>
       </div>
-      <span class="posted_date">{{ ( new Date(post.fields.published)).toDateString() }}</span>
+      <p class="posted_date">{{ ( new Date(post.fields.published)).toDateString() }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import ArticleTag from "~/components/ArticleTag.vue";
-
 export default {
   name: "ArticleThumbnail",
   props: ["post"],
@@ -44,14 +42,15 @@ export default {
     overlayColorDisable() {
       this.overlayColor = "";
     }
-  },
-  components: { ArticleTag }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .card {
-  box-shadow: none;
+  box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
 
   &:hover {
     box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
@@ -88,6 +87,7 @@ export default {
     line-height: 1.77;
     letter-spacing: normal;
     color: #292929;
+    padding-bottom: 15px;
   }
 
   .image.is-5by3 {
