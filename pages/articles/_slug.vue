@@ -47,6 +47,7 @@
 <script>
 import contentful from "~/plugins/contentful.js";
 import VueMarkdown from "vue-markdown";
+import Prism from "~/plugins/prism.js";
 
 const client = contentful.createClient();
 export default {
@@ -84,6 +85,12 @@ export default {
         };
       })
       .catch();
+  },
+  mounted() {
+    Prism.highlightAll();
+  },
+  updated() {
+    Prism.highlightAll();
   },
   computed: {
     dateOrder: function() {

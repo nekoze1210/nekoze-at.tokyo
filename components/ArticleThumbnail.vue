@@ -21,19 +21,7 @@
           <h3 class="title">{{ post.fields.title }}</h3>
         </nuxt-link>
       </div>
-      <div class="content is-clearfix">
-        <div class="tags is-pulled-left">
-          <article-tag
-            v-for="(tag, index) in post.fields.tags"
-            :key="index"
-            :tag="tag"
-            class="has-text-left"
-          />
-        </div>
-        <span
-          class="is-pulled-right posted_date"
-        >{{ ( new Date(post.fields.published)).toDateString() }}</span>
-      </div>
+      <span class="posted_date">{{ ( new Date(post.fields.published)).toDateString() }}</span>
     </div>
   </div>
 </template>
