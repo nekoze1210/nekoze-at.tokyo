@@ -54,4 +54,8 @@ export default {
   color: #247e55;
   border-bottom-color: #247e55;
 }
+
+.navbar-burger:hover {
+  background: none !important;
+}
 </style>
