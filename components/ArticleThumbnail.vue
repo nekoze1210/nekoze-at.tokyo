@@ -21,43 +21,17 @@
           <h3 class="title">{{ post.fields.title }}</h3>
         </nuxt-link>
       </div>
-      <div class="content is-clearfix">
-        <div class="tags is-pulled-left">
-          <article-tag
-            v-for="(tag, index) in post.fields.tags"
-            :key="index"
-            :tag="tag"
-            class="has-text-left"
-          />
-        </div>
-        <span
-          class="is-pulled-right posted_date"
-        >{{ ( new Date(post.fields.published)).toDateString() }}</span>
-      </div>
+      <p class="posted_date">{{ ( new Date(post.fields.published)).toDateString() }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import ArticleTag from "~/components/ArticleTag.vue";
-
 export default {
   name: "ArticleThumbnail",
   props: ["post"],
   data() {
     return {
-      tags: [
-        {
-          name: "Ruby",
-          color: "#cc2626",
-          textColor: "#fff"
-        },
-        {
-          name: "テキストエディタ",
-          color: "#2d8e7b",
-          textColor: "#fff"
-        }
-      ],
       overlayColor: ""
     };
   },
@@ -68,16 +42,20 @@ export default {
     overlayColorDisable() {
       this.overlayColor = "";
     }
-  },
-  components: { ArticleTag }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .card {
-  box-shadow: none;
+  box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.1);
 
   &:hover {
+    box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 4px 3px -3px rgba(0, 0, 0, 0.5);
     .image.is-5by3 img {
       transform: scale(1.1);
     }
@@ -109,6 +87,7 @@ export default {
     line-height: 1.77;
     letter-spacing: normal;
     color: #292929;
+    padding-bottom: 15px;
   }
 
   .image.is-5by3 {

@@ -68,7 +68,8 @@ export default {
   plugins: [
     './plugins/contentful.js',
     './plugins/tag_mapper.js',
-    './plugins/vue-scrollto.js'
+    './plugins/vue-scrollto.js',
+    '~/plugins/prism.js'
   ],
   generate: {
     routes() {
