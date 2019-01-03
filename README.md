@@ -1,6 +1,6 @@
-# do-what-works
+# nekoze-at.tokyo
 
-> Nuxt.js project
+> Portfolio site
 
 ## Build Setup
 
