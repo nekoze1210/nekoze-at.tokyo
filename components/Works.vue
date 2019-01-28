@@ -58,6 +58,16 @@ export default {
           detail:
             "映画館で発券したチケットの半券を思い出として記録できるアプリ。画面の状態遷移・機能はすべてVue.js製。Cordovaを利用し、ハイブリットアプリとして現在GooglePlayストアに公開中",
           tag: "Javascript"
+        },
+        {
+          name: "ShortPick",
+          url: "https://github.com/nekoze1210/ShortPick",
+          technology: "Javascript/Electron/AppleScript",
+          thumbnail: require("~/assets/work_thumbnails/ShortPick.png"),
+          period: "2週間",
+          detail:
+            "ショートカットで閲覧中のウェブサイトを共有できるMacOSアプリケーション",
+          tag: "Javascript"
         }
       ]
     };

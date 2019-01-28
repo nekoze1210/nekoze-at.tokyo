@@ -28,7 +28,7 @@ export default {
           name: "Ruby",
           icon: require("~/assets/skill_icons/ruby.svg"),
           icon_color: require("~/assets/skill_icons/ruby_color.svg"),
-          period: "約2年",
+          period: "約3年",
           stars: 3,
           color: "#f82020"
         },
@@ -36,7 +36,7 @@ export default {
           name: "Java",
           icon: require("~/assets/skill_icons/java.svg"),
           icon_color: require("~/assets/skill_icons/java_color.svg"),
-          period: "約1年",
+          period: "約1.5年",
           stars: 3,
           color: "#DD9038"
         },
@@ -68,7 +68,7 @@ export default {
           name: "Javascript",
           icon: require("~/assets/skill_icons/javascript.svg"),
           icon_color: require("~/assets/skill_icons/javascript_color.svg"),
-          period: "約2年",
+          period: "約2.5年",
           stars: 3,
           color: "#F4DE50"
         },
@@ -84,7 +84,7 @@ export default {
           name: "Vue.js",
           icon: require("~/assets/skill_icons/vue.svg"),
           icon_color: require("~/assets/skill_icons/vue_color.svg"),
-          period: "約10ヶ月",
+          period: "約1年",
           stars: 3,
           color: "#42b883"
         },
