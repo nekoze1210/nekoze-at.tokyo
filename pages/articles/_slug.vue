@@ -84,7 +84,12 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https:" + this.currentPost.fields.hero_image.fields.file.url
+          content: `https:${this.currentPost.fields.hero_image.fields.file.url}`
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image"
         }
       ]
     };
