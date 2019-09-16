@@ -84,7 +84,8 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: this.currentPost.fields.hero_image.fields.file.url
+          content:
+            "https://" + this.currentPost.fields.hero_image.fields.file.url
         }
       ]
     };
