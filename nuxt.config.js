@@ -9,12 +9,16 @@ const client = contentful.createClient({
 
 export default {
   loading: '~/components/Loading.vue',
+  server: {
+    port: 8000, // デフォルト: 3000
+    host: '0.0.0.0', // デフォルト: localhost
+  },
+  mode: 'universal',
   head: {
     title: 'nekoze-at.tokyo',
     htmlAttrs: {
       lang: 'ja'
     },
-    // link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     meta: [
       { charset: 'utf-8' },
       { name: 'nekoze-at.tokyo', content: 'nekoze-at.tokyo' },
@@ -32,11 +36,7 @@ export default {
         content: 'nekoze-at.tokyo',
         hid: 'ogTitle'
       },
-      {
-        property: 'og:image',
-        content: 'https://nekoze-at.tokyo/ogp.jpg',
-        hid: 'ogImage'
-      }
+
     ]
   },
   router: {

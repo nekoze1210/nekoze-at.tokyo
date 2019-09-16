@@ -74,7 +74,11 @@ export default {
     return {
       title: this.currentPost.fields.title,
       meta: [
-        { hid: "description", description: this.currentPost.fields.title },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: this.currentPost.fields.title
+        },
         { hid: "og:type", property: "og:type", content: "article" },
         { hid: "og:url", property: "og:url", content: this.$route.path },
         {
