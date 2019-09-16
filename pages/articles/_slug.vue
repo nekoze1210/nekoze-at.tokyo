@@ -72,7 +72,17 @@ export default {
   },
   head() {
     return {
-      title: this.currentPost.fields.title
+      title: this.currentPost.fields.title,
+      meta: [
+        { hid: "description", description: this.currentPost.fields.title },
+        { hid: "og:type", property: "og:type", content: "article" },
+        { hid: "og:url", property: "og:url", content: this.$route.path },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.currentPost.fields.hero_image.fields.file.url
+        }
+      ]
     };
   },
   components: {
