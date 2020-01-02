@@ -1,22 +1,19 @@
 <template>
   <div>
-    <Particles/>
+    <Particles />
     <div class="hero is-fullheight" id="about">
       <div class="hero-body">
         <div class="container">
-          <profile/>
-          <scroll-down/>
+          <profile />
+          <scroll-down />
         </div>
       </div>
     </div>
     <div class="columns is-marginless" id="skills">
-      <skills style="min-height: 100vh;"/>
-    </div>
-    <div class="columns is-marginless is-mobile" id="articles">
-      <articles style="min-height: 100vh;" :posts="posts"/>
+      <skills style="min-height: 100vh;" />
     </div>
     <div class="columns is-marginless" id="contacts">
-      <contacts style="min-height: 100vh;"/>
+      <contacts style="min-height: 100vh;" />
     </div>
   </div>
 </template>
