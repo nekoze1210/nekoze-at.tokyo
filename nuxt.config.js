@@ -1,12 +1,3 @@
-import contentful from 'contentful'
-import tagMapper from './plugins/tag_mapper.js'
-import config from './.contentful.json'
-
-const client = contentful.createClient({
-  space: config.CTF_SPACE_ID,
-  accessToken: config.CTF_CDA_ACCESS_TOKEN
-})
-
 export default {
   loading: '~/components/Loading.vue',
   server: {
@@ -66,28 +57,9 @@ export default {
     }
   },
   plugins: [
-    './plugins/contentful.js',
-    './plugins/tag_mapper.js',
     './plugins/vue-scrollto.js',
     '~/plugins/prism.js'
   ],
-  generate: {
-    routes() {
-      return client
-        .getEntries({
-          content_type: config.CTF_BLOG_POST_TYPE_ID
-        })
-        .then(entries => {
-          const tags = tagMapper.setTagPages(
-            entries.items.map(entry => entry.fields.tags)
-          )
-          return [
-            ...entries.items.map(entry => `articles/${entry.fields.slug}`),
-            ...tags.map(tag => `tags/${tag}`)
-          ]
-        })
-    }
-  },
   manifest: {
     title: 'nekoze-at.tokyo',
     name: 'nekoze-at.tokyo',
@@ -98,10 +70,6 @@ export default {
     id: 'ca-pub-6697069851005375'
   },
   env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID,
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   }
 }

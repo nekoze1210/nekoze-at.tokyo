@@ -21,7 +21,6 @@
     "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "clipboard": "^2.0.4",
-    "contentful": "^7.0.5",
     "global": "^4.3.2",
     "loaders.css": "^0.1.2",
     "luxon": "^1.2.0",
