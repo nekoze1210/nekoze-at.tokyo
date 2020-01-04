@@ -46,7 +46,6 @@ export default {
   ],
   plugins: [
     './plugins/vue-scrollto.js',
-    '~/plugins/prism.js',
   ],
   manifest: {
     title: 'nekoze-at.tokyo',
