@@ -44,21 +44,8 @@ export default {
     { src: '~/assets/reset.css' },
     { src: 'loaders.css' }
   ],
-  build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  },
   plugins: [
     './plugins/vue-scrollto.js',
-    '~/plugins/prism.js'
   ],
   manifest: {
     title: 'nekoze-at.tokyo',

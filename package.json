@@ -1,50 +1,26 @@
 {
   "name": "nekoze-at.tokyo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Daiki Nagaoka <neko.z.n1210@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "storybook": "start-storybook -p 3001"
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/font-awesome": "^1.0.3",
+    "@nuxtjs/axios": "^5.9.2",
+    "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/google-adsense": "^1.1.3",
-    "@nuxtjs/pwa": "^2.0.8",
-    "@storybook/vue": "^3.4.10",
-    "axios": "^0.18.0",
-    "bulma": "^0.7.1",
-    "clipboard": "^2.0.4",
-    "global": "^4.3.2",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
+    "bulma": "^0.8.0",
     "loaders.css": "^0.1.2",
-    "luxon": "^1.2.0",
-    "markdown-it": "^8.4.1",
-    "markdown-it-emoji": "^1.4.0",
-    "markdown-it-link-attributes": "^2.1.0",
-    "node-sass": "^4.9.0",
-    "nuxt": "^2.2.0",
+    "node-sass": "^4.13.0",
+    "nuxt": "^2.11.0",
     "particles.js": "^2.0.0",
-    "postcss-preset-env": "^5.3.0",
-    "prismjs": "^1.15.0",
-    "sass-loader": "^7.0.1",
-    "twemoji": "^2.5.1",
+    "sass-loader": "^8.0.0",
     "vue-markdown": "^2.2.4",
-    "vue-scrollto": "^2.13.0"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.19.1",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "postcss-cssnext": "^3.1.0",
-    "push-dir": "^0.4.1",
-    "vue-particle": "^1.0.0"
+    "vue-scrollto": "^2.17.1"
   }
 }
