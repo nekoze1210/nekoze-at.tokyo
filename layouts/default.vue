@@ -1,21 +1,21 @@
 <template>
   <div>
-    <app-header/>
-    <nuxt/>
+    <app-header />
+    <nuxt />
   </div>
 </template>
 
 <script>
-import AppHeader from "~/components/AppHeader";
+import AppHeader from "~/components/AppHeader"
 
 export default {
+  components: { AppHeader },
   head() {
     return {
       titleTemplate: "nekoze-at.tokyo"
-    };
-  },
-  components: { AppHeader }
-};
+    }
+  }
+}
 </script>
 
 <style>

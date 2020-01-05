@@ -1,16 +1,22 @@
 <template>
   <div class="container">
-    <h2 class="profile__heading">About Me</h2>
-    <hr class="profile__ruler">
+    <h2 class="profile__heading">
+      About Me
+    </h2>
+    <hr class="profile__ruler" />
     <div class="columns profile__about">
       <div class="column is-one-third">
         <figure class="image profile__avatar">
-          <img src="~/assets/profile.jpg" alt="@cuten77" class="is-rounded">
+          <img src="~/assets/profile.jpg" alt="@cuten77" class="is-rounded" />
         </figure>
       </div>
       <div class="column">
-        <h2 class="is-2 profile__myname">Daiki Nagaoka</h2>
-        <p class="profile__job">Web Engineer</p>
+        <h2 class="is-2 profile__myname">
+          Daiki Nagaoka
+        </h2>
+        <p class="profile__job">
+          Web Engineer
+        </p>
         <div class="columns profile__details">
           <div class="column">
             <h3>Location</h3>
@@ -33,35 +39,50 @@
           <div class="column">
             <h3>SNS</h3>
             <div class="profile__info--value">
-              <p>Github: <a href="https://github.com/nekoze1210" target="_blank">@nekoze1210</a></p>
-              <p>Twitter: <a href="https://twitter.com/cuten77" target="_blank">@cuten77</a></p>
+              <p>
+                Github:
+                <a href="https://github.com/nekoze1210" target="_blank">@nekoze1210</a>
+              </p>
+              <p>
+                Twitter:
+                <a href="https://twitter.com/cuten77" target="_blank">@cuten77</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 class="profile__heading">Introduction</h2>
-    <hr class="profile__ruler">
+    <h2 class="profile__heading">
+      Introduction
+    </h2>
+    <hr class="profile__ruler" />
     <div class="columns">
       <div class="column">
         <div class="content">
           <p>
-            はじめまして。長岡 大樹(ながおか だいき) と申します。<br>
-            新卒で大手飲食系WEBサービスを開発する企業へ入社し、会員向けの基盤システムを開発してきました。<br>
-            1年半の業務経験を経て、モダンな開発やユーザー目線でのサービスの開発がしたく、2018年9月に自動車関連のベンチャー企業に転職します。<br>
-            プログラミング言語は Java が業務経験上最も多く開発していますが、プライベートではRuby, PHP, Vue.js, React など流行っている＆興味のある分野にとことん取り組んでいます。
+            はじめまして。長岡 大樹(ながおか だいき) と申します。<br />
+            新卒で大手飲食系WEBサービスを開発する企業へ入社し、会員向けの基盤システムを開発してきました。<br />
+            1年半の業務経験を経て、モダンな開発やユーザー目線でのサービスの開発がしたく、2018年9月に自動車関連のベンチャー企業に転職します。<br />
+            プログラミング言語は Java
+            が業務経験上最も多く開発していますが、プライベートではRuby, PHP,
+            Vue.js, React
+            など流行っている＆興味のある分野にとことん取り組んでいます。
           </p>
         </div>
       </div>
     </div>
 
-    <h2 class="profile__heading">Skills</h2>
-    <hr class="profile__ruler">
+    <h2 class="profile__heading">
+      Skills
+    </h2>
+    <hr class="profile__ruler" />
     <div class="columns">
       <div class="column is-half">
         <div class="content">
-          <h3 class="subtitle">Programming Language</h3>
+          <h3 class="subtitle">
+            Programming Language
+          </h3>
           <li>Ruby</li>
           <li>Java</li>
           <li>Golang</li>
@@ -71,7 +92,9 @@
       </div>
       <div class="column is-half">
         <div class="content">
-          <h3 class="subtitle">Framework</h3>
+          <h3 class="subtitle">
+            Framework
+          </h3>
           <li>Ruby on Rails</li>
           <li>Play Framework</li>
           <li>Spring Boot</li>
@@ -81,12 +104,16 @@
       </div>
     </div>
 
-    <h2 class="profile__heading">Works</h2>
-    <hr class="profile__ruler">
+    <h2 class="profile__heading">
+      Works
+    </h2>
+    <hr class="profile__ruler" />
     <p>WIP</p>
 
-    <h2 class="profile__heading">Awards</h2>
-    <hr class="profile__ruler">
+    <h2 class="profile__heading">
+      Awards
+    </h2>
+    <hr class="profile__ruler" />
     <p>WIP</p>
   </div>
 </template>

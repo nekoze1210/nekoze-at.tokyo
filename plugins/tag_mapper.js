@@ -1,39 +1,39 @@
 const tagColorList = {
   java: {
-    backgroundColor: '#DD9038',
-    textColor: '#fff'
+    backgroundColor: "#DD9038",
+    textColor: "#fff"
   },
   ruby: {
-    backgroundColor: '#f82020',
-    textColor: '#fff'
+    backgroundColor: "#f82020",
+    textColor: "#fff"
   },
   swift: {
-    backgroundColor: '#E54C2E',
-    textColor: '#fff'
+    backgroundColor: "#E54C2E",
+    textColor: "#fff"
   },
   sass: {
-    backgroundColor: '#B96790',
-    textColor: '#fff'
+    backgroundColor: "#B96790",
+    textColor: "#fff"
   },
   javascript: {
-    backgroundColor: '#F4DE50',
-    textColor: '#fff'
+    backgroundColor: "#F4DE50",
+    textColor: "#fff"
   },
   react: {
-    backgroundColor: '#80D8F7',
-    textColor: '#fff'
+    backgroundColor: "#80D8F7",
+    textColor: "#fff"
   },
   vue: {
-    backgroundColor: '#42b883',
-    textColor: '#fff'
+    backgroundColor: "#42b883",
+    textColor: "#fff"
   },
   go: {
-    backgroundColor: '#85D4E2',
-    textColor: '#707070'
+    backgroundColor: "#85D4E2",
+    textColor: "#707070"
   },
   kotlin: {
-    backgroundColor: '#4E6698',
-    textColor: '#fff'
+    backgroundColor: "#4E6698",
+    textColor: "#fff"
   }
 }
 export default {
@@ -54,7 +54,7 @@ export default {
       }
       return colorSet
     } else {
-      return { backgroundColor: 'whitesmoke', textColor: '#707070' }
+      return { backgroundColor: "whitesmoke", textColor: "#707070" }
     }
   }
 }

@@ -1,8 +1,13 @@
 <template>
   <div class="columns is-mobile is-multiline">
-    <a @click="selectSkill(skill)" class="column" v-for="skill in skills" :key="skill.name">
+    <a
+      v-for="skill in skills"
+      :key="skill.name"
+      class="column"
+      @click="selectSkill(skill)"
+    >
       <figure class="image is-96x96">
-        <img :src="skillIconColor(skill)" :alt="skill.name" :id="skill.name">
+        <img :id="skill.name" :src="skillIconColor(skill)" :alt="skill.name">
       </figure>
     </a>
   </div>
@@ -14,18 +19,18 @@ export default {
   props: ["skills"],
   methods: {
     selectSkill(skill) {
-      this.$emit("changeSkill", skill);
+      this.$emit("changeSkill", skill)
     },
     togglePathColor(color) {
-      return "--color: " + color;
+      return "--color: " + color
     },
     skillIconColor(skill) {
       return this.$store.state.skill.name === skill.name
         ? skill.icon_color
-        : skill.icon;
+        : skill.icon
     }
   }
-};
+}
 </script>
 
 <style scoped>

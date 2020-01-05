@@ -3,18 +3,19 @@
     <div class="columns is-multiline is-mobile">
       <work-thumbnail
         v-for="(work, index) in works"
+        v-show="isTagged(work)"
         :key="index"
         :work="work"
-        v-show="isTagged(work)"
       />
     </div>
   </div>
 </template>
 
 <script>
-import WorkThumbnail from "~/components/WorkThumbnail.vue";
+import WorkThumbnail from "~/components/WorkThumbnail.vue"
 
 export default {
+  components: { WorkThumbnail },
   data() {
     return {
       works: [
@@ -70,18 +71,16 @@ export default {
           tag: "Javascript"
         }
       ]
-    };
+    }
   },
   methods: {
     isTagged(work) {
       if (this.$store.state.skill.name === work.tag) {
-        return true;
+        return true
       }
     }
-  },
-  components: { WorkThumbnail }
-};
+  }
+}
 </script>
 
-<style>
-</style>
+<style></style>

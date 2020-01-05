@@ -4,7 +4,11 @@
       <div class="card-image">
         <figure class="image is-4by3" @click="clickWork(work)">
           <img
-            :src="work.thumbnail ? work.thumbnail : 'https://bulma.io/images/placeholders/1280x960.png'"
+            :src="
+              work.thumbnail
+                ? work.thumbnail
+                : 'https://bulma.io/images/placeholders/1280x960.png'
+            "
             :alt="work.name"
           >
         </figure>
@@ -18,9 +22,9 @@ export default {
   props: ["work"],
   methods: {
     clickWork(work) {
-      this.$store.commit("changeWorkDetail", work);
-      this.$store.commit("toggleModal");
+      this.$store.commit("changeWorkDetail", work)
+      this.$store.commit("toggleModal")
     }
   }
-};
+}
 </script>

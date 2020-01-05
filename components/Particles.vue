@@ -1,13 +1,13 @@
 <template>
-  <div></div>
+  <div />
 </template>
 
 <script>
 export default {
-  name: 'ParticlesJS',
+  name: "ParticlesJS",
 
   mounted() {
-    require('particles.js')
+    require("particles.js")
     this.$nextTick(() => {
       this.initParticlesJS()
     })

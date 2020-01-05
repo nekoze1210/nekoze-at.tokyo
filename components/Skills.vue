@@ -3,24 +3,25 @@
     <div class="container has-text-centered">
       <h3>Skills & Works</h3>
       <h4>こんなことできます & しました</h4>
-      <skill-list @changeSkill="changeSkill" :skills="skills"/>
-      <divider/>
-      <skill-detail :skill="selectedSkill"/>
-      <works/>
-      <work-detail/>
+      <skill-list :skills="skills" @changeSkill="changeSkill" />
+      <divider />
+      <skill-detail :skill="selectedSkill" />
+      <works />
+      <work-detail />
     </div>
   </div>
 </template>
 
 <script>
-import Divider from "~/components/Divider.vue";
-import SkillList from "~/components/SkillList.vue";
-import SkillDetail from "~/components/SkillDetail.vue";
-import Works from "~/components/Works.vue";
-import WorkDetail from "~/components/WorkDetail.vue";
+import Divider from "~/components/Divider.vue"
+import SkillList from "~/components/SkillList.vue"
+import SkillDetail from "~/components/SkillDetail.vue"
+import Works from "~/components/Works.vue"
+import WorkDetail from "~/components/WorkDetail.vue"
 
 export default {
   name: "Skills",
+  components: { SkillList, SkillDetail, Divider, Works, WorkDetail },
   data() {
     return {
       skills: [
@@ -97,30 +98,29 @@ export default {
           color: "#4E6698"
         }
       ]
-    };
+    }
   },
   computed: {
     selectedSkill: {
       get() {
-        return this.$store.state.skill;
+        return this.$store.state.skill
       }
     },
     selectedWork: {
       get() {
-        return this.$store.state.work;
+        return this.$store.state.work
       }
     }
   },
+  mounted() {
+    this.$store.commit("changeSkillDetail", this.skills[0])
+  },
   methods: {
     changeSkill(skill) {
-      this.$store.commit("changeSkillDetail", skill);
+      this.$store.commit("changeSkillDetail", skill)
     }
-  },
-  mounted() {
-    this.$store.commit("changeSkillDetail", this.skills[0]);
-  },
-  components: { SkillList, SkillDetail, Divider, Works, WorkDetail }
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>

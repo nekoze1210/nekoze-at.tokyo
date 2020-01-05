@@ -1,5 +1,7 @@
 <template>
-  <nuxt-link to="/" class="navbar-item navbar-item-logo is-transparent">nekoze-at.tokyo</nuxt-link>
+  <nuxt-link to="/" class="navbar-item navbar-item-logo is-transparent">
+    nekoze-at.tokyo
+  </nuxt-link>
 </template>
 
 <style lang="scss" scoped>

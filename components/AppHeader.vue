@@ -1,38 +1,44 @@
 <template>
   <nav class="navbar is-transparent" role="navigation">
     <div class="navbar-brand">
-      <app-logo/>
+      <app-logo />
       <a
         type="button"
         class="navbar-burger burger"
         data-target="sideMenu"
+        :class="{ 'is-active': $store.state.isMenuActive }"
         @click="$store.commit('toggleMenu')"
-        :class="{ 'is-active' : $store.state.isMenuActive }"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
+        <span aria-hidden="true" />
       </a>
     </div>
-    <div id="sideMenu" class="navbar-menu" :class="{ 'is-active' : $store.state.isMenuActive }">
+    <div
+      id="sideMenu"
+      class="navbar-menu"
+      :class="{ 'is-active': $store.state.isMenuActive }"
+    >
       <div class="navbar-end">
-        <nuxt-link to="/" class="navbar-item is-tab" exact>TOP</nuxt-link>
+        <nuxt-link to="/" class="navbar-item is-tab" exact>
+          TOP
+        </nuxt-link>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue";
+import AppLogo from "~/components/AppLogo.vue"
 
 export default {
+  components: { AppLogo },
   data() {
     return {
       isActive: false
-    };
-  },
-  components: { AppLogo }
-};
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

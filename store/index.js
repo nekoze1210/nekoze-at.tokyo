@@ -2,19 +2,19 @@ export const state = () => ({
   isMenuActive: false,
   isModalActive: false,
   skill: {
-    name: '',
+    name: "",
     stars: 0,
-    color: '',
-    period: ''
+    color: "",
+    period: ""
   },
   work: {
-    name: '',
-    url: '',
-    technology: '',
-    thumbnail: '',
-    teg: '',
-    period: '',
-    detail: ''
+    name: "",
+    url: "",
+    technology: "",
+    thumbnail: "",
+    teg: "",
+    period: "",
+    detail: ""
   }
 })
 
