@@ -14,7 +14,7 @@
             <img
               :src="post.fields.hero_image.fields.file.url"
               :alt="post.fields.slug"
-            >
+            />
           </figure>
           <div
             class="is-overlay"
@@ -41,19 +41,24 @@
 
 <script>
 export default {
-  name: "ArticleThumbnail",
-  props: ["post"],
+  name: 'ArticleThumbnail',
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
-      overlayColor: ""
+      overlayColor: ''
     }
   },
   methods: {
     overlayColorEnable() {
-      this.overlayColor = "#2d8e7b"
+      this.overlayColor = '#2d8e7b'
     },
     overlayColorDisable() {
-      this.overlayColor = ""
+      this.overlayColor = ''
     }
   }
 }
@@ -80,7 +85,7 @@ export default {
   }
 
   .title {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -93,7 +98,7 @@ export default {
   }
 
   .posted_date {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-stretch: normal;

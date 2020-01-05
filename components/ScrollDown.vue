@@ -9,13 +9,12 @@
 </template>
 
 <script>
-import VueScrollTo from "~/plugins/vue-scrollto"
 export default {
-  name: "ScrollDown",
+  name: 'ScrollDown',
   data() {
     return {
       button: {
-        text: "Scroll Down"
+        text: 'Scroll Down'
       }
     }
   }

@@ -10,7 +10,7 @@
                 : 'https://bulma.io/images/placeholders/1280x960.png'
             "
             :alt="work.name"
-          >
+          />
         </figure>
       </div>
     </a>
@@ -19,11 +19,16 @@
 
 <script>
 export default {
-  props: ["work"],
+  props: {
+    work: {
+      type: Object,
+      required: true
+    }
+  },
   methods: {
     clickWork(work) {
-      this.$store.commit("changeWorkDetail", work)
-      this.$store.commit("toggleModal")
+      this.$store.commit('changeWorkDetail', work)
+      this.$store.commit('toggleModal')
     }
   }
 }

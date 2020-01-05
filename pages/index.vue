@@ -19,16 +19,16 @@
 </template>
 
 <script>
-import Particles from "~/components/Particles.vue"
-import Profile from "~/components/Profile.vue"
-import ScrollDown from "~/components/ScrollDown.vue"
-import Skills from "~/components/Skills.vue"
-import Contacts from "~/components/Contacts.vue"
+import Particles from '~/components/Particles.vue'
+import Profile from '~/components/Profile.vue'
+import ScrollDown from '~/components/ScrollDown.vue'
+import Skills from '~/components/Skills.vue'
+import Contacts from '~/components/Contacts.vue'
 
 export default {
   components: { Profile, Skills, ScrollDown, Particles, Contacts },
   fetch({ store }) {
-    store.commit("resetMenu")
+    store.commit('resetMenu')
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default {
   },
   head() {
     return {
-      title: "Top"
+      title: 'Top'
     }
   }
 }

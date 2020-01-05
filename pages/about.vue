@@ -33,11 +33,11 @@
 <script>
 export default {
   fetch({ store }) {
-    store.commit("resetMenu")
+    store.commit('resetMenu')
   },
   head() {
     return {
-      title: "About"
+      title: 'About'
     }
   }
 }

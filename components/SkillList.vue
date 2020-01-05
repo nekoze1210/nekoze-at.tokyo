@@ -7,7 +7,7 @@
       @click="selectSkill(skill)"
     >
       <figure class="image is-96x96">
-        <img :id="skill.name" :src="skillIconColor(skill)" :alt="skill.name">
+        <img :id="skill.name" :src="skillIconColor(skill)" :alt="skill.name" />
       </figure>
     </a>
   </div>
@@ -15,14 +15,19 @@
 
 <script>
 export default {
-  name: "SkillList",
-  props: ["skills"],
+  name: 'SkillList',
+  props: {
+    skills: {
+      type: Array,
+      required: true
+    }
+  },
   methods: {
     selectSkill(skill) {
-      this.$emit("changeSkill", skill)
+      this.$emit('changeSkill', skill)
     },
     togglePathColor(color) {
-      return "--color: " + color
+      return '--color: ' + color
     },
     skillIconColor(skill) {
       return this.$store.state.skill.name === skill.name

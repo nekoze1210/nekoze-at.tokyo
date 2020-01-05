@@ -11,12 +11,17 @@
 </template>
 
 <script>
-import ArticleThumbnail from "~/components/ArticleThumbnail.vue"
+import ArticleThumbnail from '~/components/ArticleThumbnail.vue'
 
 export default {
-  name: "ArticleList",
+  name: 'ArticleList',
   components: { ArticleThumbnail },
-  props: ["posts"]
+  props: {
+    posts: {
+      type: Array,
+      required: true
+    }
+  }
 }
 </script>
 

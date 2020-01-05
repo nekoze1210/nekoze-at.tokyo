@@ -14,7 +14,7 @@
                       : 'https://bulma.io/images/placeholders/1280x960.png'
                   "
                   alt="Placeholder image"
-                >
+                />
               </figure>
             </div>
             <div class="column is-half">
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     resetModal() {
-      this.$store.commit("resetModalContent")
+      this.$store.commit('resetModalContent')
     }
   }
 }

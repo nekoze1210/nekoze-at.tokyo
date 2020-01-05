@@ -18,14 +18,12 @@
 </template>
 
 <script>
-import ScrollDown from "~/components/ScrollDown.vue"
-
 export default {
-  name: "Profile",
+  name: 'Profile',
   data() {
     return {
-      myName: "Daiki Nagaoka",
-      myJob: "Server Side Engineer"
+      myName: 'Daiki Nagaoka',
+      myJob: 'Server Side Engineer'
     }
   }
 }
@@ -43,7 +41,7 @@ export default {
   &__myname {
     display: inline-block;
     text-align: left;
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 30px;
     font-weight: bold;
     font-style: normal;
@@ -56,7 +54,7 @@ export default {
   &__myjob {
     display: inline-block;
     text-align: left;
-    font-family: Avenir, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: Avenir, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;

@@ -41,11 +41,15 @@
             <div class="profile__info--value">
               <p>
                 Github:
-                <a href="https://github.com/nekoze1210" target="_blank">@nekoze1210</a>
+                <a href="https://github.com/nekoze1210" target="_blank">
+                  @nekoze1210
+                </a>
               </p>
               <p>
                 Twitter:
-                <a href="https://twitter.com/cuten77" target="_blank">@cuten77</a>
+                <a href="https://twitter.com/cuten77" target="_blank">
+                  @cuten77
+                </a>
               </p>
             </div>
           </div>

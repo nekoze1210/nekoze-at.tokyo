@@ -11,7 +11,9 @@
       >
         <i class="fa fa-lg fa-star checked" />
       </span>
-      <p class="skill__period is-spaced">使用期間: {{ skill.period }}</p>
+      <p class="skill__period is-spaced">
+        使用期間: <span>{{ skill.period }}</span>
+      </p>
       <p class="skill__works is-spaced">
         制作物:
       </p>
@@ -21,8 +23,13 @@
 
 <script>
 export default {
-  name: "SkillDetail",
-  props: ["skill"]
+  name: 'SkillDetail',
+  props: {
+    skill: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
@@ -41,7 +48,7 @@ export default {
   }
 
   &__period {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
@@ -54,7 +61,7 @@ export default {
   }
 
   &__works {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 16px;
     font-weight: 500;
     font-style: normal;
