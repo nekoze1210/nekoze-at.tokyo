@@ -2,7 +2,7 @@ export default {
   loading: '~/components/Loading.vue',
   server: {
     port: 8000, // デフォルト: 3000
-    host: '0.0.0.0', // デフォルト: localhost
+    host: '0.0.0.0' // デフォルト: localhost
   },
   mode: 'universal',
   head: {
@@ -26,8 +26,7 @@ export default {
         property: 'og:title',
         content: 'nekoze-at.tokyo',
         hid: 'ogTitle'
-      },
-
+      }
     ]
   },
   router: {
@@ -44,9 +43,7 @@ export default {
     { src: '~/assets/reset.css' },
     { src: 'loaders.css' }
   ],
-  plugins: [
-    './plugins/vue-scrollto.js',
-  ],
+  plugins: ['./plugins/vue-scrollto.js'],
   manifest: {
     title: 'nekoze-at.tokyo',
     name: 'nekoze-at.tokyo',

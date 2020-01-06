@@ -1,49 +1,67 @@
 <template>
   <div class="column is-half-mobile is-half-tablet is-one-third-desktop">
-    <div class="card" @mouseover="overlayColorEnable" @mouseleave="overlayColorDisable">
+    <div
+      class="card"
+      @mouseover="overlayColorEnable"
+      @mouseleave="overlayColorDisable"
+    >
       <nuxt-link
-        :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}"
+        :to="{ name: 'articles-slug', params: { slug: post.fields.slug } }"
         aria-label="article"
       >
         <div class="card-image">
           <figure class="image is-5by3">
-            <img :src="post.fields.hero_image.fields.file.url" :alt="post.fields.slug">
+            <img
+              :src="post.fields.hero_image.fields.file.url"
+              :alt="post.fields.slug"
+            />
           </figure>
           <div
             class="is-overlay"
             style="opacity: 0.4; transition: 0.2s linear;"
-            :style="{'background-color': overlayColor}"
-          ></div>
+            :style="{ 'background-color': overlayColor }"
+          />
         </div>
       </nuxt-link>
       <div class="media-content">
-        <nuxt-link :to="{ name: 'articles-slug', params: { slug: post.fields.slug }}">
-          <h3 class="title">{{ post.fields.title }}</h3>
+        <nuxt-link
+          :to="{ name: 'articles-slug', params: { slug: post.fields.slug } }"
+        >
+          <h3 class="title">
+            {{ post.fields.title }}
+          </h3>
         </nuxt-link>
       </div>
-      <p class="posted_date">{{ ( new Date(post.fields.published)).toDateString() }}</p>
+      <p class="posted_date">
+        {{ new Date(post.fields.published).toDateString() }}
+      </p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ArticleThumbnail",
-  props: ["post"],
+  name: 'ArticleThumbnail',
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
-      overlayColor: ""
-    };
+      overlayColor: ''
+    }
   },
   methods: {
     overlayColorEnable() {
-      this.overlayColor = "#2d8e7b";
+      this.overlayColor = '#2d8e7b'
     },
     overlayColorDisable() {
-      this.overlayColor = "";
+      this.overlayColor = ''
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -67,7 +85,7 @@ export default {
   }
 
   .title {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 18px;
     font-weight: bold;
     font-style: normal;
@@ -80,7 +98,7 @@ export default {
   }
 
   .posted_date {
-    font-family: YuGo, "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    font-family: YuGo, 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
     font-size: 13px;
     font-style: normal;
     font-stretch: normal;

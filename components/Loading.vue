@@ -1,9 +1,9 @@
 <template>
-<div v-if="loading" class="loading__bg">
-  <div class="square-spin">
-    <div></div>
+  <div v-if="loading" class="loading__bg">
+    <div class="square-spin">
+      <div />
+    </div>
   </div>
-</div>
 </template>
 
 <script>

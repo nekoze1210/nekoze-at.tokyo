@@ -4,18 +4,23 @@
       <h3>Articles</h3>
       <h4>独学・仕事で学んだ知見など</h4>
     </div>
-    <article-list :posts="posts"/>
+    <article-list :posts="posts" />
   </div>
 </template>
 
 <script>
-import ArticleList from "~/components/ArticleList.vue";
+import ArticleList from '~/components/ArticleList.vue'
 
 export default {
-  name: "Articles",
-  props: ["posts"],
-  components: { ArticleList }
-};
+  name: 'Articles',
+  components: { ArticleList },
+  props: {
+    posts: {
+      type: Array,
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

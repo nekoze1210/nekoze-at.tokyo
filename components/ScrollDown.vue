@@ -2,24 +2,23 @@
   <div class="columns has-text-centered">
     <div class="column">
       <a v-scroll-to="'#skills'">
-        <span></span>
+        <span />
       </a>
     </div>
   </div>
 </template>
 
 <script>
-import VueScrollTo from "~/plugins/vue-scrollto";
 export default {
-  name: "ScrollDown",
+  name: 'ScrollDown',
   data() {
     return {
       button: {
-        text: "Scroll Down"
+        text: 'Scroll Down'
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

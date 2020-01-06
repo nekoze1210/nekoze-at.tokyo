@@ -1,6 +1,6 @@
 <template>
   <div class="modal" :class="{ 'is-active': isActive }">
-    <div class="modal-background" @click="resetModal"></div>
+    <div class="modal-background" @click="resetModal" />
     <div class="modal-content">
       <div class="modal-card is-marginless">
         <div class="modal-card-body has-text-left">
@@ -8,26 +8,36 @@
             <div class="column is-half">
               <figure class="image">
                 <img
-                  :src="selectedWork.thumbnail ? selectedWork.thumbnail : 'https://bulma.io/images/placeholders/1280x960.png'"
+                  :src="
+                    selectedWork.thumbnail
+                      ? selectedWork.thumbnail
+                      : 'https://bulma.io/images/placeholders/1280x960.png'
+                  "
                   alt="Placeholder image"
-                >
+                />
               </figure>
             </div>
             <div class="column is-half">
               <h3>{{ selectedWork.name }}</h3>
               <h4>
                 URL:
-                <a :href="selectedWork.url" target="_blank">{{ selectedWork.url }}</a>
+                <a :href="selectedWork.url" target="_blank">{{
+                  selectedWork.url
+                }}</a>
               </h4>
               <h4>使用技術: {{ selectedWork.technology }}</h4>
               <h4>製作期間: {{ selectedWork.period }}</h4>
-              <p v-html="selectedWork.detail"/>
+              <p v-html="selectedWork.detail" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button class="modal-close is-large" aria-label="close" @click="resetModal"></button>
+    <button
+      class="modal-close is-large"
+      aria-label="close"
+      @click="resetModal"
+    />
   </div>
 </template>
 
@@ -36,21 +46,21 @@ export default {
   computed: {
     selectedWork: {
       get() {
-        return this.$store.state.work;
+        return this.$store.state.work
       }
     },
     isActive: {
       get() {
-        return this.$store.state.isModalActive;
+        return this.$store.state.isModalActive
       }
     }
   },
   methods: {
     resetModal() {
-      this.$store.commit("resetModalContent");
+      this.$store.commit('resetModalContent')
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

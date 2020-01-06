@@ -1,6 +1,8 @@
 <template>
   <div class="columns">
-    <div class="column"><hr class="divider"></div>
+    <div class="column">
+      <hr class="divider" />
+    </div>
   </div>
 </template>
 
