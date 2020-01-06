@@ -1,5 +1,4 @@
 export const state = () => ({
-  isMenuActive: false,
   isModalActive: false,
   skill: {
     name: '',
@@ -24,9 +23,6 @@ export const mutations = {
   },
   changeWorkDetail(state, payload) {
     state.work = payload
-  },
-  toggleMenu(state) {
-    state.isMenuActive = !state.isMenuActive
   },
   resetMenu(state) {
     state.isMenuActive = false
